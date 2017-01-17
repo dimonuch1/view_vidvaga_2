@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		815F4D981E2E2CAC002D7E29 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815F4D971E2E2CAC002D7E29 /* MenuViewController.swift */; };
 		815F4D9A1E2E2CF3002D7E29 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815F4D991E2E2CF3002D7E29 /* MenuTableViewCell.swift */; };
+		815F4D9C1E2E5563002D7E29 /* MassegeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815F4D9B1E2E5563002D7E29 /* MassegeViewController.swift */; };
 		818BF2A31E2D103E00DFB36E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818BF2A21E2D103E00DFB36E /* AppDelegate.swift */; };
 		818BF2A51E2D103E00DFB36E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818BF2A41E2D103E00DFB36E /* ViewController.swift */; };
 		818BF2A81E2D103E00DFB36E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 818BF2A61E2D103E00DFB36E /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		815F4D971E2E2CAC002D7E29 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		815F4D991E2E2CF3002D7E29 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		815F4D9B1E2E5563002D7E29 /* MassegeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MassegeViewController.swift; sourceTree = "<group>"; };
 		818BF29F1E2D103E00DFB36E /* view_vidvaga_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = view_vidvaga_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		818BF2A21E2D103E00DFB36E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		818BF2A41E2D103E00DFB36E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				818BF2B11E2D103E00DFB36E /* Info.plist */,
 				818BF2A91E2D103E00DFB36E /* view_vidvaga_2.xcdatamodeld */,
 				818BF2B71E2D105100DFB36E /* view_vidvaga_2-Bridging-Header.h */,
+				815F4D9B1E2E5563002D7E29 /* MassegeViewController.swift */,
 			);
 			path = view_vidvaga_2;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			files = (
 				818BF2A51E2D103E00DFB36E /* ViewController.swift in Sources */,
 				815F4D981E2E2CAC002D7E29 /* MenuViewController.swift in Sources */,
+				815F4D9C1E2E5563002D7E29 /* MassegeViewController.swift in Sources */,
 				815F4D9A1E2E2CF3002D7E29 /* MenuTableViewCell.swift in Sources */,
 				818BF2AB1E2D103E00DFB36E /* view_vidvaga_2.xcdatamodeld in Sources */,
 				818BF2A31E2D103E00DFB36E /* AppDelegate.swift in Sources */,
