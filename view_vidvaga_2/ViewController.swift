@@ -18,17 +18,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        
         self.setupColor()
     
-        
         self.menuButton.target = revealViewController()
         self.menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
-        //self.menuButton.setBackgroundImage(UIImage.init(named: "1.png"), for: .normal, barMetrics: .default)
-
         
-        //self.menuButton = self.createMenuButton()
-    }
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+}
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
