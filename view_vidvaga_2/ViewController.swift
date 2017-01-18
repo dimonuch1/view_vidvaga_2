@@ -29,7 +29,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
         for var i in 0...5 {
-            mainEvent.append("Новость про АТО номер \(i)")
+            mainEvent.append("Новость про АТО номер(yyyyyyyyyyyyyyyyyyyyyyyyyyyyyy) \(i)")
             //print(i)
         }
         mainEventImage = ["ukr","ukr2","ukr3","ukr4","ukr7","ukr6"]
@@ -60,14 +60,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     func setupColor() {
         //set color for title navigationItem
-        let myAttribute = [NSFontAttributeName: UIFont(name: "Chalkduster", size: 23.0)!,NSForegroundColorAttributeName:color]
+        let myAttribute = [NSFontAttributeName: UIFont(name: "Times New Roman", size: 23.0)!,NSForegroundColorAttributeName:UIColor.black]
         let str = NSAttributedString(string: "Vidvaga.info", attributes: myAttribute)
         let titleLabel = UILabel()
         titleLabel.attributedText = str
         titleLabel.sizeToFit()
         self.navigationItem.titleView = titleLabel
         //set color for title navigationItemLeft
-        self.navigationItem.leftBarButtonItem?.tintColor = color
+        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.black
     }
     
     //MARK: - UITableViewDataSource
@@ -90,15 +90,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         print(mainEventImage[indexPath.row])
         cell!.textMain.text = mainEvent[indexPath.row]
 
-       
-        
        return cell!
 }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
     
     //Mark: - UITableViewDelegate
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
         return 130.0
     }
 
+    //MARK: - Action
+    
+    @IBAction func pressedOnNews(_ sender: UIButton) {
+        
+        print("press")
+        
+    }
+    
+    
 }
