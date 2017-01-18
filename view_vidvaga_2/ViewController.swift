@@ -8,9 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     let color = UIColor(red: 30/255, green: 140/255, blue: 93/255,alpha: 1)//ukrop color
+    
+    var mainEvent = [String]()
+    var mainEventImage = [String]()
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
@@ -24,6 +27,13 @@ class ViewController: UIViewController {
         self.menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
         
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        
+        for var i in 0...5 {
+            mainEvent.append("Новость про АТО номер \(i)")
+            //print(i)
+        }
+        mainEventImage = ["ukr","ukr2","ukr3","ukr4","ukr7","ukr6"]
+        
 }
     
     override func didReceiveMemoryWarning() {
@@ -58,6 +68,37 @@ class ViewController: UIViewController {
         self.navigationItem.titleView = titleLabel
         //set color for title navigationItemLeft
         self.navigationItem.leftBarButtonItem?.tintColor = color
+    }
+    
+    //MARK: - UITableViewDataSource
+    
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return mainEvent.count
+    }
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+        print(indexPath.row)
+        let identifire = "MenuEventTableViewCell"
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifire, for: indexPath) as? MenuEventTableViewCell
+        /*
+        if cell == nil {
+            cell = MenuEventTableViewCell.init(style: UITableViewCellStyle.default, reuseIdentifier: identifire)
+        }
+        */
+        cell!.buttonEvent.setImage(UIImage(named:"\(mainEventImage[indexPath.row])"), for: UIControlState.normal)
+        print(mainEventImage[indexPath.row])
+        cell!.textMain.text = mainEvent[indexPath.row]
+
+       
+        
+       return cell!
+}
+    
+    
+    //Mark: - UITableViewDelegate
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
+        return 130.0
     }
 
 }
