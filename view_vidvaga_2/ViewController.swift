@@ -11,9 +11,6 @@ import CoreData
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    
-    
-    
     let color = UIColor(red: 30/255, green: 140/255, blue: 93/255,alpha: 1)//ukrop color
     
     var mainEvent = [String]()
@@ -26,10 +23,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     //Mark: - IBOutlet
     
-    
-    
-   
-    
     @IBOutlet weak var phone: UIButton!
     
     @IBOutlet weak var menuButton: UIBarButtonItem?
@@ -39,7 +32,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     // set images like
-        
         
         var application = UIApplication.shared.delegate as! AppDelegate
         managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -68,9 +60,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
        printCoreData()
         
         mainEventImage = ["ukr","ukr2","ukr3","ukr4","ukr7","ukr6"]
-        
-      
-        
         
 }
     
@@ -184,18 +173,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBAction func btnPhone(_ sender: UIButton) {
         
-        let alertController = UIAlertController(title: "Destructive", message: "Simple alertView demo with Destructive and Ok.", preferredStyle: UIAlertControllerStyle.alert) //Replace UIAlertControllerStyle.Alert by UIAlertControllerStyle.alert
-        let DestructiveAction = UIAlertAction(title: "Destructive", style: UIAlertActionStyle.destructive) {
+        let alertController = UIAlertController(title: "Информация", message: "Звонок в ОДА", preferredStyle: UIAlertControllerStyle.alert) //Replace UIAlertControllerStyle.Alert by UIAlertControllerStyle.alert
+        let DestructiveAction = UIAlertAction(title: "Отмена", style: UIAlertActionStyle.destructive) {
             (result : UIAlertAction) -> Void in
             print("Destructive")
         }
         
         // Replace UIAlertActionStyle.Default by UIAlertActionStyle.default
-        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
+        let okAction = UIAlertAction(title: "Звонить", style: UIAlertActionStyle.default) {
             (result : UIAlertAction) -> Void in
             let url:NSURL = NSURL(string:"tel//:12345678")!
             
-            UIApplication.shared.open((url as NSURL) as URL, options: [:], completionHandler: nil)
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(url as URL)
+            }
+            
             print("OK")
         }
         
@@ -204,8 +198,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.present(alertController, animated: true, completion: nil)
         
     }
-    
-    
     
     // MARK: - Save in CoraData
     
@@ -227,17 +219,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         } catch {
             print("\(error)")
         }
-        
-        
-        
-        
-        
-        
-        
     }
-    
-    
-    
 }
 
 
