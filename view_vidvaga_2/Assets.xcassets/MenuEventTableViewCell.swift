@@ -10,6 +10,10 @@ import UIKit
 
 class MenuEventTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var btnLike: UIButton!
+    
+    @IBOutlet weak var btnDislike: UIButton!
+    
     @IBOutlet weak var buttonEvent: UIButton!
     
     @IBOutlet weak var timeEvent: UILabel!

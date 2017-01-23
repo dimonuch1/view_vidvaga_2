@@ -20,7 +20,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        menuNameArray = ["Home","Messege","Settings","Log out"]
+        menuNameArray = ["Home","Messege","Settings","Log In"]
         iconeImage = [UIImage(named:"home")!,UIImage(named:"messege")!,UIImage(named:"settings")!,UIImage(named:"log_out")!]
     
         imgProfile.layer.borderColor = color.cgColor
@@ -70,6 +70,12 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         if cell.lblMemu.text! == "Messege"{
             let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let desController = mainStoryboard.instantiateViewController(withIdentifier: "MassegeViewController") as! MassegeViewController
+            let newFrontViewController = UINavigationController.init(rootViewController: desController)
+            revealViewController.pushFrontViewController(newFrontViewController, animated: true)
+        }
+        if cell.lblMemu.text! == "Log In" {
+            let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let desController = mainStoryboard.instantiateViewController(withIdentifier: "SingInMenuViewController") as! SingInMenuViewController
             let newFrontViewController = UINavigationController.init(rootViewController: desController)
             revealViewController.pushFrontViewController(newFrontViewController, animated: true)
         }
