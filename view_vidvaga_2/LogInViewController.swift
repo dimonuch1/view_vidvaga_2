@@ -1,32 +1,43 @@
 //
-//  MassegeViewController.swift
+//  LogInViewController.swift
 //  view_vidvaga_2
 //
-//  Created by ios on 17.01.17.
+//  Created by ios on 30.01.17.
 //  Copyright © 2017 Alex Berezovskyy. All rights reserved.
 //
 
-//вью для сообщений
+//для НЕ зарегестрированого пользователя
 
 import UIKit
 
-class MassegeViewController: UIViewController {
+class LogInViewController: UIViewController {
 
-    let color = UIColor(red: 30/255, green: 140/255, blue: 93/255,alpha: 1)//ukrop color
-    
-    //создание кнопки бокового меню
     @IBOutlet weak var btnMenu: UIBarButtonItem!
+
+    @IBOutlet weak var emailText: UITextField!
+    
+    @IBOutlet weak var phoneNumberText: UITextField!
+    
+    @IBOutlet weak var military_idText: UITextField!
+    
+    @IBOutlet weak var passwordText: UITextField!
+    
+    @IBOutlet weak var passwordTwoText: UITextField!
+    
+    @IBAction func createAcount(_ sender: UIButton) {
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Do any additional setup after loading the view.
+        
         //обработка выезжания бокового меню
         self.btnMenu.target = revealViewController()
         self.btnMenu.action = #selector(SWRevealViewController.revealToggle(_:))
         //обработка выезжания скольжением пальца
-        self.navigationItem.leftBarButtonItem?.tintColor = color
-        
-        // Do any additional setup after loading the view.
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
 
     override func didReceiveMemoryWarning() {

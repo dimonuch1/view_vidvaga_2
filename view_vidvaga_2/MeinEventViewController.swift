@@ -6,6 +6,10 @@
 //  Copyright © 2017 Alex Berezovskyy. All rights reserved.
 //
 
+
+//пока не понятно зачем этот класс
+
+
 import UIKit
 
 class MeinEventViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {

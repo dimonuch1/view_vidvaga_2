@@ -6,26 +6,60 @@
 //  Copyright © 2017 Alex Berezovskyy. All rights reserved.
 //
 
+struct One {
+    var keychin:KeychainSwift
+}
+
+
 import UIKit
 import CoreData
+import KeychainSwift
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    let color = UIColor(red: 30/255, green: 140/255, blue: 93/255,alpha: 1)//ukrop color
+    //хранитель ключей
+     let MyKeychainWrapper = KeychainSwift()
     
+    
+    //ukrop color
+    let color = UIColor(red: 30/255, green: 140/255, blue: 93/255,alpha: 1)
+    
+    //масивы содержания ячеек
     var mainEvent = [String]()
     var mainEventImage = [String]()
     var helperTextArray = [String]()
     
+    //массив будущих обьектов entity  MainEventtable
     var events = [NSManagedObject]()
     
+    //наш контекст для кор даты (планируется не использовать)
     var managedObjectContext:NSManagedObjectContext!
+    
     
     //Mark: - IBOutlet
     
+    //кнопка зваонка в ОДА
     @IBOutlet weak var phone: UIButton!
     
+    //кнопка вызова боковго меню
     @IBOutlet weak var menuButton: UIBarButtonItem?
+    
+    
+    
+    //=============================================================================================
+    
+    //MARK: - Start
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //if(segue.isKindOfClass(SWRevealViewControllerSegue))
+        if segue.identifier == "sw_rear" {
+            var DestinationViewController : MenuViewController = segue.destination as! MenuViewController
+            DestinationViewController.keychain = MyKeychainWrapper
+        }
+    }
+   
+    
+    
     
     
     override func viewDidLoad() {
@@ -33,17 +67,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Do any additional setup after loading the view, typically from a nib.
     // set images like
         
+        
+        
         var application = UIApplication.shared.delegate as! AppDelegate
         managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
+        //установка картиночки телефончика в кнопку звонка в ОДА
         self.phone.setImage(UIImage(named:"phone"), for: UIControlState.normal)
         self.phone.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
         
+        
         self.setupColor()
     
+        //обработка выезжания бокового меню
         self.menuButton?.target = revealViewController()
         self.menuButton?.action = #selector(SWRevealViewController.revealToggle(_:))
-        
+        //обработка выезжания скольжением пальца
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
         
@@ -64,26 +103,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 }
     
     
-    func printCoreData(){
-        do{
-            let result = try managedObjectContext.fetch(MainEventTable.fetchRequest())
-            
-            for var tmp in result as! [NSManagedObject] {
-                if let mainText = tmp.value(forKey: "mainEventText") {
-                    print(mainText)
-                }
-                if let helperText = tmp.value(forKey: "helperText") {
-                    print(helperText)
-                }
-                if let date = tmp.value(forKey: "date") {
-                    print(date)
-                }
-            }
-        } catch {
-            
-        }
-    }
-    
+    //что то очень не понятное
     func saveCoreTest(){
         saveInCoreData(mainText: mainEvent[Int(arc4random_uniform(UInt32(mainEvent.count)))],
                        helperText: helperTextArray[Int(arc4random_uniform(UInt32(helperTextArray.count)))])
@@ -108,6 +128,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.navigationItem.setRightBarButton(barButton, animated: true)
 }
 
+    
+    //установка тайтл надписи
     func setupColor() {
         //set color for title navigationItem
         let myAttribute = [NSFontAttributeName: UIFont(name: "Times New Roman", size: 23.0)!,NSForegroundColorAttributeName:UIColor.black]
@@ -153,6 +175,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return 130.0
     }
 
+    
+    
     //MARK: - Action
     
     @IBAction func pressedOnNews(_ sender: UIButton) {
@@ -161,32 +185,42 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
 
+    
+    //добавление в избраное
     @IBAction func bookmarks(_ sender: UIButton) {
 
         if sender.imageView?.image == UIImage(named:"bookmarks_false") {
             sender.setImage(UIImage(named:"bookmarks_true"), for: UIControlState.normal)
         } else {
+            //убираем флажек избранного
+            
+            //реализовать процедуру удаления из избранного
+            
              sender.setImage(UIImage(named:"bookmarks_false"), for: UIControlState.normal)
         }
 }
     
     
     @IBAction func btnPhone(_ sender: UIButton) {
-        
+        //вывод сообщения о намерении позвонить
         let alertController = UIAlertController(title: "Информация", message: "Звонок в ОДА", preferredStyle: UIAlertControllerStyle.alert) //Replace UIAlertControllerStyle.Alert by UIAlertControllerStyle.alert
+        //если пользователь не хочет звонить
         let DestructiveAction = UIAlertAction(title: "Отмена", style: UIAlertActionStyle.destructive) {
             (result : UIAlertAction) -> Void in
             print("Destructive")
         }
         
         // Replace UIAlertActionStyle.Default by UIAlertActionStyle.default
+        //хочет звонить
         let okAction = UIAlertAction(title: "Звонить", style: UIAlertActionStyle.default) {
             (result : UIAlertAction) -> Void in
+            //номер для набора
             let url:NSURL = NSURL(string:"tel//:12345678")!
             
             if #available(iOS 10.0, *) {
                 UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
             } else {
+                //если у пользователя не ios 10
                 UIApplication.shared.openURL(url as URL)
             }
             
@@ -199,16 +233,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
-    // MARK: - Save in CoraData
+    // MARK: - CoraData
     
+    
+    //получение контекста
     func getContext () -> NSManagedObjectContext {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         return appDelegate.persistentContainer.viewContext
     }
     
     
+    
+    //сохранение в кор дату
     func saveInCoreData(mainText:String , helperText:String) {
 
+        //массив event теперь масив обьектов entity  MainEventtable
         let events = NSEntityDescription.insertNewObject(forEntityName: "MainEventTable", into: managedObjectContext)
         events.setValue(mainText, forKey: "mainEventText")
         events.setValue(helperText, forKey: "helperText")
@@ -220,6 +259,31 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             print("\(error)")
         }
     }
+    
+    
+    //вывод кор даты на экран
+    func printCoreData(){
+        do{
+            let result = try managedObjectContext.fetch(MainEventTable.fetchRequest())
+            
+            for var tmp in result as! [NSManagedObject] {
+                if let mainText = tmp.value(forKey: "mainEventText") {
+                    print(mainText)
+                }
+                if let helperText = tmp.value(forKey: "helperText") {
+                    print(helperText)
+                }
+                if let date = tmp.value(forKey: "date") {
+                    print(date)
+                }
+            }
+        } catch {
+            
+        }
+    }
+
+    
+    
 }
 
 

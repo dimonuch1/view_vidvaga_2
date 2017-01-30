@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		810324101E3213CF00B86E0B /* EventClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8103240F1E3213CF00B86E0B /* EventClass.swift */; };
 		8110D1991E2F6B0E003854ED /* MenuEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8110D1981E2F6B0E003854ED /* MenuEventTableViewCell.swift */; };
 		8110D19B1E2F7A12003854ED /* MeinEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8110D19A1E2F7A12003854ED /* MeinEventViewController.swift */; };
 		8140A96A1E35FE29001CF18B /* SingInMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8140A9691E35FE29001CF18B /* SingInMenuViewController.swift */; };
@@ -21,10 +20,70 @@
 		818BF2AD1E2D103E00DFB36E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 818BF2AC1E2D103E00DFB36E /* Assets.xcassets */; };
 		818BF2B01E2D103E00DFB36E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 818BF2AE1E2D103E00DFB36E /* LaunchScreen.storyboard */; };
 		818BF2BA1E2D105100DFB36E /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818BF2B91E2D105100DFB36E /* SWRevealViewController.m */; };
+		81C0574D1E3F69E500AAD70E /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81C0573E1E3F699D00AAD70E /* KeychainSwift.framework */; };
+		81C0574F1E3F908900AAD70E /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C0574E1E3F908900AAD70E /* LogInViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		81C0573D1E3F699D00AAD70E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81C057311E3F699C00AAD70E /* KeychainSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7ED6C96C1B1C118F00FE8090;
+			remoteInfo = KeychainSwift;
+		};
+		81C0573F1E3F699D00AAD70E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81C057311E3F699C00AAD70E /* KeychainSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 232B4C7A1BC29950001F2B7A;
+			remoteInfo = "KeychainSwift-macOS";
+		};
+		81C057411E3F699D00AAD70E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81C057311E3F699C00AAD70E /* KeychainSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 232B4C8A1BC29984001F2B7A;
+			remoteInfo = "KeychainSwift-watchOS";
+		};
+		81C057431E3F699D00AAD70E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81C057311E3F699C00AAD70E /* KeychainSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 23E785601BDA410C00B7564A;
+			remoteInfo = "KeychainSwift-tvOS";
+		};
+		81C057451E3F699D00AAD70E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81C057311E3F699C00AAD70E /* KeychainSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7ED6C9771B1C118F00FE8090;
+			remoteInfo = KeychainSwiftTests;
+		};
+		81C057471E3F699D00AAD70E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81C057311E3F699C00AAD70E /* KeychainSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7ED6C99D1B1C133500FE8090;
+			remoteInfo = Demo;
+		};
+		81C057491E3F699D00AAD70E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81C057311E3F699C00AAD70E /* KeychainSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7E3A6B601D3F62C2007C5B1F;
+			remoteInfo = "macOS Tests";
+		};
+		81C0574B1E3F699D00AAD70E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81C057311E3F699C00AAD70E /* KeychainSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7E3A6B7B1D3F6779007C5B1F;
+			remoteInfo = "macOS Demo";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		8103240F1E3213CF00B86E0B /* EventClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventClass.swift; sourceTree = "<group>"; };
 		8110D1981E2F6B0E003854ED /* MenuEventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuEventTableViewCell.swift; path = Assets.xcassets/MenuEventTableViewCell.swift; sourceTree = "<group>"; };
 		8110D19A1E2F7A12003854ED /* MeinEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeinEventViewController.swift; sourceTree = "<group>"; };
 		8140A9691E35FE29001CF18B /* SingInMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingInMenuViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +101,8 @@
 		818BF2B71E2D105100DFB36E /* view_vidvaga_2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "view_vidvaga_2-Bridging-Header.h"; sourceTree = "<group>"; };
 		818BF2B81E2D105100DFB36E /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		818BF2B91E2D105100DFB36E /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		81C057311E3F699C00AAD70E /* KeychainSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeychainSwift.xcodeproj; path = "../keychain-swift-master/KeychainSwift.xcodeproj"; sourceTree = "<group>"; };
+		81C0574E1E3F908900AAD70E /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81C0574D1E3F69E500AAD70E /* KeychainSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +120,7 @@
 		818BF2961E2D103E00DFB36E = {
 			isa = PBXGroup;
 			children = (
+				81C057311E3F699C00AAD70E /* KeychainSwift.xcodeproj */,
 				818BF2A11E2D103E00DFB36E /* view_vidvaga_2 */,
 				818BF2A01E2D103E00DFB36E /* Products */,
 			);
@@ -74,8 +137,7 @@
 		818BF2A11E2D103E00DFB36E /* view_vidvaga_2 */ = {
 			isa = PBXGroup;
 			children = (
-				818BF2B81E2D105100DFB36E /* SWRevealViewController.h */,
-				818BF2B91E2D105100DFB36E /* SWRevealViewController.m */,
+				81C057501E3F953900AAD70E /* SWRevealViewController */,
 				818BF2A21E2D103E00DFB36E /* AppDelegate.swift */,
 				818BF2A41E2D103E00DFB36E /* ViewController.swift */,
 				818BF2A61E2D103E00DFB36E /* Main.storyboard */,
@@ -89,10 +151,34 @@
 				815F4D9B1E2E5563002D7E29 /* MassegeViewController.swift */,
 				8110D1981E2F6B0E003854ED /* MenuEventTableViewCell.swift */,
 				8110D19A1E2F7A12003854ED /* MeinEventViewController.swift */,
-				8103240F1E3213CF00B86E0B /* EventClass.swift */,
 				8140A9691E35FE29001CF18B /* SingInMenuViewController.swift */,
+				81C0574E1E3F908900AAD70E /* LogInViewController.swift */,
 			);
 			path = view_vidvaga_2;
+			sourceTree = "<group>";
+		};
+		81C057321E3F699C00AAD70E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				81C0573E1E3F699D00AAD70E /* KeychainSwift.framework */,
+				81C057401E3F699D00AAD70E /* KeychainSwift.framework */,
+				81C057421E3F699D00AAD70E /* KeychainSwift.framework */,
+				81C057441E3F699D00AAD70E /* KeychainSwift.framework */,
+				81C057461E3F699D00AAD70E /* KeychainSwiftTests.xctest */,
+				81C057481E3F699D00AAD70E /* Keychain Swift.app */,
+				81C0574A1E3F699D00AAD70E /* macOS Tests.xctest */,
+				81C0574C1E3F699D00AAD70E /* macOS Demo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		81C057501E3F953900AAD70E /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				818BF2B81E2D105100DFB36E /* SWRevealViewController.h */,
+				818BF2B91E2D105100DFB36E /* SWRevealViewController.m */,
+			);
+			name = SWRevealViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,12 +229,77 @@
 			mainGroup = 818BF2961E2D103E00DFB36E;
 			productRefGroup = 818BF2A01E2D103E00DFB36E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 81C057321E3F699C00AAD70E /* Products */;
+					ProjectRef = 81C057311E3F699C00AAD70E /* KeychainSwift.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				818BF29E1E2D103E00DFB36E /* view_vidvaga_2 */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		81C0573E1E3F699D00AAD70E /* KeychainSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KeychainSwift.framework;
+			remoteRef = 81C0573D1E3F699D00AAD70E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		81C057401E3F699D00AAD70E /* KeychainSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KeychainSwift.framework;
+			remoteRef = 81C0573F1E3F699D00AAD70E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		81C057421E3F699D00AAD70E /* KeychainSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KeychainSwift.framework;
+			remoteRef = 81C057411E3F699D00AAD70E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		81C057441E3F699D00AAD70E /* KeychainSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KeychainSwift.framework;
+			remoteRef = 81C057431E3F699D00AAD70E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		81C057461E3F699D00AAD70E /* KeychainSwiftTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = KeychainSwiftTests.xctest;
+			remoteRef = 81C057451E3F699D00AAD70E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		81C057481E3F699D00AAD70E /* Keychain Swift.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Keychain Swift.app";
+			remoteRef = 81C057471E3F699D00AAD70E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		81C0574A1E3F699D00AAD70E /* macOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "macOS Tests.xctest";
+			remoteRef = 81C057491E3F699D00AAD70E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		81C0574C1E3F699D00AAD70E /* macOS Demo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "macOS Demo.app";
+			remoteRef = 81C0574B1E3F699D00AAD70E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		818BF29D1E2D103E00DFB36E /* Resources */ = {
@@ -176,9 +327,9 @@
 				818BF2AB1E2D103E00DFB36E /* view_vidvaga_2.xcdatamodeld in Sources */,
 				818BF2A31E2D103E00DFB36E /* AppDelegate.swift in Sources */,
 				8140A96A1E35FE29001CF18B /* SingInMenuViewController.swift in Sources */,
+				81C0574F1E3F908900AAD70E /* LogInViewController.swift in Sources */,
 				818BF2BA1E2D105100DFB36E /* SWRevealViewController.m in Sources */,
 				8110D19B1E2F7A12003854ED /* MeinEventViewController.swift in Sources */,
-				810324101E3213CF00B86E0B /* EventClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

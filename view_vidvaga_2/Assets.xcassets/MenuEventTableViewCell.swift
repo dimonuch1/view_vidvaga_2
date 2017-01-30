@@ -6,6 +6,9 @@
 //  Copyright © 2017 Alex Berezovskyy. All rights reserved.
 //
 
+
+//класс ячеек ленты новостей
+
 import UIKit
 
 class MenuEventTableViewCell: UITableViewCell {

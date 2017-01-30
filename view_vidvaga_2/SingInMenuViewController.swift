@@ -6,6 +6,8 @@
 //  Copyright © 2017 Alex Berezovskyy. All rights reserved.
 //
 
+//вью регистрации пользователя
+
 import UIKit
 
 class SingInMenuViewController: UIViewController {
