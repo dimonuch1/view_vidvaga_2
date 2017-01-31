@@ -12,6 +12,7 @@ import UIKit
 
 class LogInViewController: UIViewController {
 
+    
     @IBOutlet weak var btnMenu: UIBarButtonItem!
 
     @IBOutlet weak var emailText: UITextField!
@@ -25,8 +26,9 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var passwordTwoText: UITextField!
     
     @IBAction func createAcount(_ sender: UIButton) {
-        
+     
     }
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()

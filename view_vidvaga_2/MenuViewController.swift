@@ -48,7 +48,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     
-        iconeImage = [UIImage(named:"home")!,UIImage(named:"messege")!,UIImage(named:"settings")!,UIImage(named:"log_out")!]
+        iconeImage = [UIImage(named:"home")!,UIImage(named:"message")!,UIImage(named:"settings")!,UIImage(named:"log_out")!]
     
         imgProfile.layer.borderColor = color.cgColor
         //imgProfile.layer.cornerRadius = 10

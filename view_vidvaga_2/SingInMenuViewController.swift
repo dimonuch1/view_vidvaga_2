@@ -14,14 +14,14 @@ class SingInMenuViewController: UIViewController {
 
     
     
-    @IBOutlet weak var tbnMenu: UIBarButtonItem!
+    //@IBOutlet weak var tbnMenu: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.tbnMenu.target = revealViewController()
-        self.tbnMenu.action = #selector(SWRevealViewController.revealToggle(_:))
-         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        //self.tbnMenu.target = revealViewController()
+       // self.tbnMenu.action = #selector(SWRevealViewController.revealToggle(_:))
+        // self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
         // Do any additional setup after loading the view.
     }

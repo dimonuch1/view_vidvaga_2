@@ -67,14 +67,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Do any additional setup after loading the view, typically from a nib.
     // set images like
         
-        
+        self.navigationItem.titleView = UIImageView(image:UIImage(named:"main_image"))
         
         var application = UIApplication.shared.delegate as! AppDelegate
         managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         //установка картиночки телефончика в кнопку звонка в ОДА
-        self.phone.setImage(UIImage(named:"phone"), for: UIControlState.normal)
-        self.phone.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
+        //self.phone.setImage(UIImage(named:"call"), for: UIControlState.normal)
+        //self.phone.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
         
         
         self.setupColor()
@@ -159,8 +159,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         print(mainEventImage[indexPath.row])
         cell!.textMain.text = mainEvent[indexPath.row]
 
-        cell!.btnLike.setImage(UIImage(named:"like"), for: UIControlState.normal)
-        cell!.btnDislike.setImage(UIImage(named:"dislike"), for: UIControlState.normal)
         
        return cell!
 }
@@ -189,18 +187,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //добавление в избраное
     @IBAction func bookmarks(_ sender: UIButton) {
 
-        if sender.imageView?.image == UIImage(named:"bookmarks_false") {
-            sender.setImage(UIImage(named:"bookmarks_true"), for: UIControlState.normal)
+        if sender.imageView?.image == UIImage(named:"bookmark_unchek") {
+            sender.setImage(UIImage(named:"bookmark_chek"), for: UIControlState.normal)
         } else {
             //убираем флажек избранного
             
             //реализовать процедуру удаления из избранного
             
-             sender.setImage(UIImage(named:"bookmarks_false"), for: UIControlState.normal)
+             sender.setImage(UIImage(named:"bookmark_unchek"), for: UIControlState.normal)
         }
 }
     
-    
+    //звонок
     @IBAction func btnPhone(_ sender: UIButton) {
         //вывод сообщения о намерении позвонить
         let alertController = UIAlertController(title: "Информация", message: "Звонок в ОДА", preferredStyle: UIAlertControllerStyle.alert) //Replace UIAlertControllerStyle.Alert by UIAlertControllerStyle.alert
@@ -232,6 +230,29 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.present(alertController, animated: true, completion: nil)
         
     }
+    
+    // кнопка инфо
+    @IBAction func pressButtonInfo(_ sender: UIButton) {
+        
+    }
+    
+    //дислайк
+    @IBAction func pressButtonDislike(_ sender: UIButton) {
+        
+    }
+    
+    
+    //лайк
+    @IBAction func pressButtonLike(_ sender: UIButton) {
+        
+    }
+    
+    //пойду
+    @IBAction func pressButtonGo(_ sender: UIButton) {
+        
+    }
+    
+    
     
     // MARK: - CoraData
     
