@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		810AE4DE1E40A642007E21A7 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810AE4C41E408E80007E21A7 /* KeychainSwift.framework */; };
+		810AE5131E40B74B007E21A7 /* TextFieldEffects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810AE5121E40B740007E21A7 /* TextFieldEffects.framework */; };
 		8110D1991E2F6B0E003854ED /* MenuEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8110D1981E2F6B0E003854ED /* MenuEventTableViewCell.swift */; };
 		8110D19B1E2F7A12003854ED /* MeinEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8110D19A1E2F7A12003854ED /* MeinEventViewController.swift */; };
 		8140A96A1E35FE29001CF18B /* SingInMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8140A9691E35FE29001CF18B /* SingInMenuViewController.swift */; };
@@ -81,10 +82,25 @@
 			remoteGlobalIDString = 7E3A6B7B1D3F6779007C5B1F;
 			remoteInfo = "macOS Demo";
 		};
+		810AE50F1E40B740007E21A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 810AE50A1E40B740007E21A7 /* TextFieldEffects.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CBF766D1A71AF7700073B6A;
+			remoteInfo = TextFieldsDemo;
+		};
+		810AE5111E40B740007E21A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 810AE50A1E40B740007E21A7 /* TextFieldEffects.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CB3B6CE1AA8DEA7000AFA56;
+			remoteInfo = TextFieldEffects;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		810AE4B71E408E80007E21A7 /* KeychainSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeychainSwift.xcodeproj; path = "keychain-swift-master/KeychainSwift.xcodeproj"; sourceTree = "<group>"; };
+		810AE50A1E40B740007E21A7 /* TextFieldEffects.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TextFieldEffects.xcodeproj; path = "TextFieldEffects-master/TextFieldEffects/TextFieldEffects.xcodeproj"; sourceTree = "<group>"; };
 		8110D1981E2F6B0E003854ED /* MenuEventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuEventTableViewCell.swift; path = Assets.xcassets/MenuEventTableViewCell.swift; sourceTree = "<group>"; };
 		8110D19A1E2F7A12003854ED /* MeinEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeinEventViewController.swift; sourceTree = "<group>"; };
 		8140A9691E35FE29001CF18B /* SingInMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingInMenuViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				810AE5131E40B74B007E21A7 /* TextFieldEffects.framework in Frameworks */,
 				810AE4DE1E40A642007E21A7 /* KeychainSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,9 +150,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		810AE50B1E40B740007E21A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				810AE5101E40B740007E21A7 /* TextFieldsDemo.app */,
+				810AE5121E40B740007E21A7 /* TextFieldEffects.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		818BF2961E2D103E00DFB36E = {
 			isa = PBXGroup;
 			children = (
+				810AE50A1E40B740007E21A7 /* TextFieldEffects.xcodeproj */,
 				810AE4B71E408E80007E21A7 /* KeychainSwift.xcodeproj */,
 				81C057311E3F699C00AAD70E /* .. */,
 				818BF2A11E2D103E00DFB36E /* view_vidvaga_2 */,
@@ -236,6 +263,10 @@
 					ProductGroup = 810AE4B81E408E80007E21A7 /* Products */;
 					ProjectRef = 810AE4B71E408E80007E21A7 /* KeychainSwift.xcodeproj */;
 				},
+				{
+					ProductGroup = 810AE50B1E40B740007E21A7 /* Products */;
+					ProjectRef = 810AE50A1E40B740007E21A7 /* TextFieldEffects.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -299,6 +330,20 @@
 			fileType = wrapper.application;
 			path = "macOS Demo.app";
 			remoteRef = 810AE4D11E408E80007E21A7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		810AE5101E40B740007E21A7 /* TextFieldsDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = TextFieldsDemo.app;
+			remoteRef = 810AE50F1E40B740007E21A7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		810AE5121E40B740007E21A7 /* TextFieldEffects.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TextFieldEffects.framework;
+			remoteRef = 810AE5111E40B740007E21A7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

@@ -127,49 +127,90 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hjf-dc-PfD">
-                                <rect key="frame" x="50" y="233" width="275" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tgg-uo-hNp" customClass="IsaoTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="50" y="70" width="275" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                        <color key="value" red="0.96114157919999998" green="0.51068010100000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tgg-uo-hNp">
-                                <rect key="frame" x="50" y="81" width="275" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="military id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m98-uI-MIi" customClass="IsaoTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="50" y="115" width="275" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                        <color key="value" red="0.96114157919999998" green="0.51068010100000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="military id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m98-uI-MIi">
-                                <rect key="frame" x="50" y="119" width="275" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xd1-eW-VfH" customClass="IsaoTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="50" y="160" width="275" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xd1-eW-VfH">
-                                <rect key="frame" x="50" y="157" width="275" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password again" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KdX-LP-1Gc">
-                                <rect key="frame" x="50" y="195" width="275" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                        <color key="value" red="0.96114157919999998" green="0.51068010100000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c01-zG-3Ob">
-                                <rect key="frame" x="139" y="283" width="97" height="30"/>
+                                <rect key="frame" x="139" y="303" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Create acount"/>
+                                <color key="tintColor" red="0.96114157919999998" green="0.51068010100000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Создать"/>
                                 <connections>
                                     <action selector="createAcount:" destination="Br7-Xf-CJm" eventType="touchUpInside" id="5iZ-ur-4oF"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password again" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KdX-LP-1Gc" customClass="IsaoTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="50" y="205" width="275" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                        <color key="value" red="0.96114157919999998" green="0.51068010100000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hjf-dc-PfD" customClass="IsaoTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="50" y="250" width="275" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                        <color key="value" red="0.96114157919999998" green="0.51068010100000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -229,24 +270,31 @@
                                                     <attributedString key="attributedText">
                                                         <fragment content="В украине началась борьба с резервистави">
                                                             <attributes>
-                                                                <font key="NSFont" size="17" name="Arial-BoldMT"/>
+                                                                <font key="NSFont" size="18" name="ArialMT"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                             </attributes>
                                                         </fragment>
                                                     </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Более 1000 резервистов в течении..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y69-9z-m5f">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y69-9z-m5f">
                                                     <rect key="frame" x="126" y="75" width="241" height="21"/>
-                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="13"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Более 1000 резервистов в течении...">
+                                                            <attributes>
+                                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <font key="NSFont" size="12" name="Helvetica-Light"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7I-rN-FC1">
-                                                    <rect key="frame" x="126" y="96" width="29" height="26"/>
+                                                    <rect key="frame" x="126" y="96" width="27" height="24"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="29" id="ALq-HX-aEB"/>
-                                                        <constraint firstAttribute="height" constant="26" id="hoI-9O-2QA"/>
+                                                        <constraint firstAttribute="width" constant="27" id="ALq-HX-aEB"/>
+                                                        <constraint firstAttribute="height" constant="24" id="hoI-9O-2QA"/>
                                                     </constraints>
                                                     <state key="normal" image="bookmark_unchek">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -256,9 +304,9 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDz-xC-DoF">
-                                                    <rect key="frame" x="332" y="90" width="35" height="30"/>
+                                                    <rect key="frame" x="332" y="90" width="33" height="28"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="35" id="kbB-Yf-2lI"/>
+                                                        <constraint firstAttribute="width" constant="33" id="kbB-Yf-2lI"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <state key="normal" title="+">
@@ -287,7 +335,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFA-hA-GVp" userLabel="like">
-                                                    <rect key="frame" x="309" y="97" width="24" height="24"/>
+                                                    <rect key="frame" x="309" y="97" width="22" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                                     <state key="normal" image="like"/>
                                                     <connections>
@@ -296,14 +344,14 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QpI-Cf-ds8">
-                                                    <rect key="frame" x="278" y="97" width="24" height="24"/>
+                                                    <rect key="frame" x="278" y="97" width="22" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                                     <state key="normal" image="dislike">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8C-7R-XPi" userLabel="info">
-                                                    <rect key="frame" x="156" y="97" width="24" height="24"/>
+                                                    <rect key="frame" x="156" y="97" width="22" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Button" image="help"/>
                                                     <connections>
@@ -321,14 +369,14 @@
                                                 <constraint firstItem="NWR-Wm-3up" firstAttribute="trailing" secondItem="V6v-rf-yvG" secondAttribute="trailingMargin" id="EJK-bw-x3P"/>
                                                 <constraint firstItem="fDz-xC-DoF" firstAttribute="top" secondItem="NWR-Wm-3up" secondAttribute="bottom" constant="18" id="P4L-Gp-eY3"/>
                                                 <constraint firstItem="qjQ-uk-Dw8" firstAttribute="top" secondItem="V6v-rf-yvG" secondAttribute="top" constant="-4" id="Qkg-bA-I8p"/>
-                                                <constraint firstItem="NWR-Wm-3up" firstAttribute="trailing" secondItem="fDz-xC-DoF" secondAttribute="trailing" id="Rqv-Lv-muY"/>
+                                                <constraint firstItem="NWR-Wm-3up" firstAttribute="trailing" secondItem="fDz-xC-DoF" secondAttribute="trailing" constant="2" id="Rqv-Lv-muY"/>
                                                 <constraint firstItem="y69-9z-m5f" firstAttribute="leading" secondItem="62T-ab-x2p" secondAttribute="trailing" constant="11" id="U8g-NB-55b"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="fDz-xC-DoF" secondAttribute="bottom" constant="1" id="XEc-1a-tuj"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="fDz-xC-DoF" secondAttribute="bottom" constant="3" id="XEc-1a-tuj"/>
                                                 <constraint firstItem="ypZ-GM-vf7" firstAttribute="top" secondItem="V6v-rf-yvG" secondAttribute="topMargin" constant="-3" id="a3P-Lb-K7G"/>
                                                 <constraint firstItem="NWR-Wm-3up" firstAttribute="trailing" secondItem="ypZ-GM-vf7" secondAttribute="trailing" id="hgd-6j-W6t"/>
                                                 <constraint firstItem="NWR-Wm-3up" firstAttribute="trailing" secondItem="y69-9z-m5f" secondAttribute="trailing" id="jk2-cd-Xpz"/>
                                                 <constraint firstItem="y69-9z-m5f" firstAttribute="top" secondItem="NWR-Wm-3up" secondAttribute="bottom" constant="3" id="kvv-rC-rXz"/>
-                                                <constraint firstItem="g7I-rN-FC1" firstAttribute="bottom" secondItem="V6v-rf-yvG" secondAttribute="bottomMargin" constant="1" id="tPv-Fj-1RD"/>
+                                                <constraint firstItem="g7I-rN-FC1" firstAttribute="bottom" secondItem="V6v-rf-yvG" secondAttribute="bottomMargin" constant="-1" id="tPv-Fj-1RD"/>
                                                 <constraint firstItem="NWR-Wm-3up" firstAttribute="leading" secondItem="qjQ-uk-Dw8" secondAttribute="leading" id="uKb-P0-Ane"/>
                                                 <constraint firstItem="qjQ-uk-Dw8" firstAttribute="leading" secondItem="62T-ab-x2p" secondAttribute="trailing" constant="11" id="umc-rz-Uja"/>
                                                 <constraint firstItem="qjQ-uk-Dw8" firstAttribute="top" secondItem="V6v-rf-yvG" secondAttribute="top" constant="-4" id="wuI-c7-Rgz"/>

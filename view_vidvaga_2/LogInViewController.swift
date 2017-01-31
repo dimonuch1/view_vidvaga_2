@@ -9,6 +9,7 @@
 //для НЕ зарегестрированого пользователя
 
 import UIKit
+import TextFieldEffects
 
 class LogInViewController: UIViewController {
 
