@@ -35,7 +35,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //наш контекст для кор даты (планируется не использовать)
     var managedObjectContext:NSManagedObjectContext!
     
-    
     //Mark: - IBOutlet
     
     //кнопка зваонка в ОДА
@@ -50,18 +49,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     //MARK: - Start
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //if(segue.isKindOfClass(SWRevealViewControllerSegue))
-        if segue.identifier == "sw_rear" {
-            var DestinationViewController : MenuViewController = segue.destination as! MenuViewController
-            DestinationViewController.keychain = MyKeychainWrapper
-        }
-    }
-   
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -69,7 +56,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         self.navigationItem.titleView = UIImageView(image:UIImage(named:"main_image"))
         
-        var application = UIApplication.shared.delegate as! AppDelegate
+        //var application = UIApplication.shared.delegate as! AppDelegate
+       
         managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         //установка картиночки телефончика в кнопку звонка в ОДА
@@ -97,6 +85,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //saveCoreTest()
         
        printCoreData()
+        printCoreData()
         
         mainEventImage = ["ukr","ukr2","ukr3","ukr4","ukr7","ukr6"]
         
@@ -189,9 +178,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
         if sender.imageView?.image == UIImage(named:"bookmark_unchek") {
             sender.setImage(UIImage(named:"bookmark_chek"), for: UIControlState.normal)
+            //сохранение в избранное
+        sender.superview.
+        self.saveInBookmarks(mainText: <#T##String#>, helperText: <#T##String#>, date: <#T##NSDate#>, type: <#T##String#>)
+            
         } else {
             //убираем флажек избранного
-            
             //реализовать процедуру удаления из избранного
             
              sender.setImage(UIImage(named:"bookmark_unchek"), for: UIControlState.normal)
@@ -302,8 +294,46 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
         }
     }
-
     
+    func saveInBookmarks(mainText:String , helperText:String , date:NSDate , type:String) {
+        
+        //массив event теперь масив обьектов entity  MainEventtable
+        let events = NSEntityDescription.insertNewObject(forEntityName: "BookmarksEvent", into: managedObjectContext)
+        events.setValue(mainText, forKey: "mainEventText")
+        events.setValue(helperText, forKey: "helperText")
+        events.setValue(date, forKey: "date")
+        
+        do{
+            try managedObjectContext.save()
+        } catch {
+            print("\(error)")
+        }
+    }
+
+
+    //print bookmarks from core data
+    
+    func printFromBookmarksCoreData(){
+        do{
+            let result = try managedObjectContext.fetch(BookmarksEvent.fetchRequest())
+            
+            for var tmp in result as! [NSManagedObject] {
+                if let mainText = tmp.value(forKey: "mainEventText") {
+                    print(mainText)
+                }
+                if let helperText = tmp.value(forKey: "helperText") {
+                    print(helperText)
+                }
+                if let date = tmp.value(forKey: "date") {
+                    print(date)
+                }
+                print()
+            }
+        } catch {
+            
+        }
+    }
+
     
 }
 
