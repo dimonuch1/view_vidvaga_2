@@ -75,11 +75,6 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.lblMemu.text! = menuNameArray[indexPath.row]
         return cell
     }
-
-    
-    
-    
-    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
@@ -91,9 +86,6 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell:MenuTableViewCell = tableView.cellForRow(at: indexPath) as! MenuTableViewCell
         
         //обработка нажаний
-        
-        
-        
         
         if cell.lblMemu.text! == "Главная" {
             let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -107,24 +99,12 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
             let newFrontViewController = UINavigationController.init(rootViewController: desController)
             revealViewController.pushFrontViewController(newFrontViewController, animated: true)
         }
-        /*
-        if cell.lblMemu.text! == "Войти" {
-            let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let desController = mainStoryboard.instantiateViewController(withIdentifier: "SingInMenuViewController") as! SingInMenuViewController
-            let newFrontViewController = UINavigationController.init(rootViewController: desController)
-            revealViewController.pushFrontViewController(newFrontViewController, animated: true)
-        }
-        */
-        
-        
-        
         if cell.lblMemu.text! == "Войти" {
             let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let desController = mainStoryboard.instantiateViewController(withIdentifier: "LogInViewController") as! LogInViewController
             let newFrontViewController = UINavigationController.init(rootViewController: desController)
             revealViewController.pushFrontViewController(newFrontViewController, animated: true)
         }
-        
         if cell.lblMemu.text! == "Выйти" {
             let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let desController = mainStoryboard.instantiateViewController(withIdentifier: "zaregalsa") as! SingInMenuViewController

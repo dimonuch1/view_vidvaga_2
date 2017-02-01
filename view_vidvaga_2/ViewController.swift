@@ -150,11 +150,29 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
         
        return cell!
-}
+    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         tableView.deselectRow(at: indexPath, animated: true)
         
+        //что то важное
+        let revealViewController:SWRevealViewController = self.revealViewController()
+        
+        let cell = tableView.cellForRow(at: indexPath) as! MenuEventTableViewCell
+        
+        let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let desController = mainStoryboard.instantiateViewController(withIdentifier: "DeteilEventViewController") as! DeteilEventViewController
+    
+        desController.mainTextTmp = cell.textMain.text!
+        print(cell.textMain.text!)
+        print(indexPath)
+        desController.helperTextTmp = cell.textHelper.text!
+        desController.dateTmp = cell.timeEvent.text!
+        desController.imageTmp = (cell.buttonEvent.imageView?.image)!
+        
+        let newFrontViewController = UINavigationController.init(rootViewController: desController)
+        revealViewController.pushFrontViewController(newFrontViewController, animated: true)
     }
     
     //Mark: - UITableViewDelegate
@@ -179,8 +197,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if sender.imageView?.image == UIImage(named:"bookmark_unchek") {
             sender.setImage(UIImage(named:"bookmark_chek"), for: UIControlState.normal)
             //сохранение в избранное
-        sender.superview.
-        self.saveInBookmarks(mainText: <#T##String#>, helperText: <#T##String#>, date: <#T##NSDate#>, type: <#T##String#>)
+        //sender.superview.
+        //self.saveInBookmarks(mainText: <#T##String#>, helperText: <#T##String#>, date: <#T##NSDate#>, type: <#T##String#>)
             
         } else {
             //убираем флажек избранного
