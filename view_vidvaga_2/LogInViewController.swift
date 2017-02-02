@@ -16,20 +16,17 @@ class LogInViewController: UIViewController {
     
     @IBOutlet weak var btnMenu: UIBarButtonItem!
 
-    @IBOutlet weak var emailText: UITextField!
-    
     @IBOutlet weak var phoneNumberText: UITextField!
     
-    @IBOutlet weak var military_idText: UITextField!
-    
     @IBOutlet weak var passwordText: UITextField!
-    
-    @IBOutlet weak var passwordTwoText: UITextField!
-    
+
     @IBAction func createAcount(_ sender: UIButton) {
      
     }
    
+    @IBOutlet weak var enterBottom: UIButton!
+    
+    @IBOutlet weak var registrationButtom: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +38,18 @@ class LogInViewController: UIViewController {
         self.btnMenu.action = #selector(SWRevealViewController.revealToggle(_:))
         //обработка выезжания скольжением пальца
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        
+        //enterBottom.backgroundColor = UIColor.clear
+        enterBottom.layer.cornerRadius = 5
+        enterBottom.layer.borderWidth = 1
+        enterBottom.layer.borderColor = UIColor.black.cgColor
+        
+        //registrationButtom.backgroundColor = UIColor.clear
+        registrationButtom.layer.cornerRadius = 5
+        registrationButtom.layer.borderWidth = 1
+        registrationButtom.layer.borderColor = UIColor.black.cgColor
+
+        
     }
 
     override func didReceiveMemoryWarning() {

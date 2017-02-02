@@ -24,6 +24,7 @@
 		818BF2B01E2D103E00DFB36E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 818BF2AE1E2D103E00DFB36E /* LaunchScreen.storyboard */; };
 		818BF2BA1E2D105100DFB36E /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818BF2B91E2D105100DFB36E /* SWRevealViewController.m */; };
 		81C0574F1E3F908900AAD70E /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C0574E1E3F908900AAD70E /* LogInViewController.swift */; };
+		81D47ED01E436060005FC3CC /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D47ECF1E436060005FC3CC /* RegistrationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,7 @@
 		818BF2B91E2D105100DFB36E /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		81C057311E3F699C00AAD70E /* .. */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ..; path = ../..; sourceTree = "<group>"; };
 		81C0574E1E3F908900AAD70E /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		81D47ECF1E436060005FC3CC /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +202,7 @@
 				8140A9691E35FE29001CF18B /* SingInMenuViewController.swift */,
 				81C0574E1E3F908900AAD70E /* LogInViewController.swift */,
 				81802C581E41EC7D003FF627 /* DeteilEventViewController.swift */,
+				81D47ECF1E436060005FC3CC /* RegistrationViewController.swift */,
 			);
 			path = view_vidvaga_2;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				8110D1991E2F6B0E003854ED /* MenuEventTableViewCell.swift in Sources */,
 				81802C591E41EC7D003FF627 /* DeteilEventViewController.swift in Sources */,
 				815F4D981E2E2CAC002D7E29 /* MenuViewController.swift in Sources */,
+				81D47ED01E436060005FC3CC /* RegistrationViewController.swift in Sources */,
 				815F4D9C1E2E5563002D7E29 /* MassegeViewController.swift in Sources */,
 				815F4D9A1E2E2CF3002D7E29 /* MenuTableViewCell.swift in Sources */,
 				818BF2AB1E2D103E00DFB36E /* view_vidvaga_2.xcdatamodeld in Sources */,
