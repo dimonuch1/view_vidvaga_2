@@ -120,7 +120,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tgg-uo-hNp" customClass="IsaoTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="53" y="102" width="268" height="34"/>
+                                <rect key="frame" x="53" y="102" width="268" height="33.5"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -327,7 +327,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Регистрация" id="Fu5-ts-Vkm">
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Сохранить" id="i95-t5-P7i"/>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Сохранить" id="i95-t5-P7i">
+                            <connections>
+                                <action selector="save:" destination="IMC-Bc-o2B" id="YaT-0z-L7u"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>

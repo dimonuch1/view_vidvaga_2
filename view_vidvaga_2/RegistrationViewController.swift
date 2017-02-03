@@ -24,13 +24,14 @@ class RegistrationViewController: UIViewController {
     
     @IBOutlet weak var phone: IsaoTextField!
     
+    @IBAction func save(_ sender: UIBarButtonItem) {
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        let systemVersion = UIDevice.current.systemVersion
-        let model = UIDevice.current.model
-        print("device type=\(model)")
         
 }
 

@@ -20,9 +20,7 @@ class LogInViewController: UIViewController {
     
     @IBOutlet weak var passwordText: UITextField!
 
-    @IBAction func createAcount(_ sender: UIButton) {
-     
-    }
+    
    
     @IBOutlet weak var enterBottom: UIButton!
     
@@ -55,6 +53,11 @@ class LogInViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    @IBAction func createAcount(_ sender: UIButton) {
+        
     }
     
 
