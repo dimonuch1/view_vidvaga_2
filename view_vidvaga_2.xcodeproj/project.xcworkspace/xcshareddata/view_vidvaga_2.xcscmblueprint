@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "C4DCA1C20A1BCC75C5804855003997154FAC9AF7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "2B2B4722BE647247A6BEB93FA4F2876EA8A02F36" : 9223372036854775807,
+    "C4DCA1C20A1BCC75C5804855003997154FAC9AF7" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "82E01A16-0E21-45BA-AEE5-347702C59C05",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "2B2B4722BE647247A6BEB93FA4F2876EA8A02F36" : "..\/..",
+    "C4DCA1C20A1BCC75C5804855003997154FAC9AF7" : "view_vidvaga_2\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "view_vidvaga_2",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "view_vidvaga_2.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/gitlab.digitaloutlooks.com\/ul\/centerATO.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2B2B4722BE647247A6BEB93FA4F2876EA8A02F36"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/dimonuch1\/view_vidvaga_2.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C4DCA1C20A1BCC75C5804855003997154FAC9AF7"
+    }
+  ]
+}
