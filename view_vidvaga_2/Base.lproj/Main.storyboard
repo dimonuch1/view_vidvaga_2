@@ -101,6 +101,7 @@
                     </view>
                     <connections>
                         <outlet property="imgProfile" destination="Ayv-Yf-k3M" id="UJv-Pe-s03"/>
+                        <outlet property="tableMenu" destination="T3c-Wp-3Z8" id="Z5j-UH-c1K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MNF-wJ-Pm4" userLabel="First Responder" sceneMemberID="firstResponder"/>

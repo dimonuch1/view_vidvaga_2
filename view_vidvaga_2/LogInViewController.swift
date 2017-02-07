@@ -58,6 +58,50 @@ class LogInViewController: UIViewController {
     
     @IBAction func createAcount(_ sender: UIButton) {
         
+        
+        if phoneNumberText.text == "" || passwordText.text == "" {
+            //вывод сообщения о oшибке
+            let alertController = UIAlertController(title: "Ошибка", message: "Есть пустые поля", preferredStyle: UIAlertControllerStyle.alert) //Replace UIAlertControllerStyle.Alert by UIAlertControllerStyle.alert
+            
+            let okAction = UIAlertAction(title: "Ок", style: UIAlertActionStyle.default) {
+                (result : UIAlertAction) -> Void in
+            }
+            
+            alertController.addAction(okAction)
+            self.present(alertController, animated: true, completion: nil)
+            
+            
+        } else {
+            let json = ["phone_number": Int(phoneNumberText.text!),
+                        "password": passwordText.text] as [String : Any]
+            /*
+             Alamofire.request("http://oasushqg.beget.tech/user/create", method: .post, parameters: json, encoding: JSONEncoding.default)
+             .responseJSON { response in
+             print("response------>>>>>")
+             print(response)
+             print("response.request----->>>>>")
+             print(response.request)  // original URL request
+             print("response.response---->>>>>")
+             print(response.response) // URL response
+             print("response.data---->>>>>")
+             print(response.data)     // server data
+             print("response.result----->>>>")
+             print(response.result)   // result of response serialization
+             print("json = response.result.value======>>>")
+             if let json = response.result.value {
+             print("JSON: \(json)")
+             }
+             }
+             */
+            
+            let tmp = Singleton.shared
+            tmp.change()
+            //MenuViewController.updateTableMy()
+            
+        }
+
+        
+        
     }
     
 

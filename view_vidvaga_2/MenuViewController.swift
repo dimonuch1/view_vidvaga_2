@@ -14,6 +14,7 @@ import KeychainSwift
 
 class MenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
+    @IBOutlet weak var tableMenu: UITableView!
     
     var keychain:KeychainSwift = KeychainSwift()
     
@@ -37,31 +38,36 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
-        menuNameArray = ["Главная","Сообщения","Настройки"]
-        
-    if keychain.get("login") == nil {
-        menuNameArray += ["Войти"]
-        } else {
-        menuNameArray += ["Выйти"]
     }
     
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+        menuNameArray = ["Главная","Сообщения","Настройки"]
+        
+        var tmp = Singleton.shared  // Singleton
+        
+        if  tmp.login == false {
+            menuNameArray += ["Войти"]
+        } else {
+            menuNameArray += ["Выйти"]
+        }
+        
         iconeImage = [UIImage(named:"home")!,UIImage(named:"message")!,UIImage(named:"settings")!,UIImage(named:"log_out")!]
-    
+        
         imgProfile.layer.borderColor = color.cgColor
         //imgProfile.layer.cornerRadius = 10
         imgProfile.layer.masksToBounds = false
         imgProfile.clipsToBounds = true
         
+        tableMenu.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     //MAKR: - UITableViewDataSource
     

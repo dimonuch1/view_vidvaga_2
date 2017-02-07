@@ -351,9 +351,28 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
         }
     }
-
     
 }
+
+
+// MARK: - Singleton
+
+class Singleton {
+    func change() {
+        self.login = !self.login
+        print("login = \(self.login)")
+    }
+    
+    var login:Bool
+    
+    static let shared = Singleton()
+    
+    private init() {
+        self.login = false
+    }
+    
+}
+
 
 
 
