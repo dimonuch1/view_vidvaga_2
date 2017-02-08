@@ -10,6 +10,8 @@
 
 import UIKit
 import TextFieldEffects
+import Alamofire
+import SwiftyJSON
 
 class LogInViewController: UIViewController {
 
@@ -29,7 +31,9 @@ class LogInViewController: UIViewController {
     
     @IBOutlet weak var registrationButtom: UIButton!
     
+    let urlLogin = "http://oasushqg.beget.tech/user/create"
     
+    //MARK: - Start
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,33 +71,47 @@ class LogInViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
+    func alertMessage(title:String,message:String) {
+        //вывод сообщения о oшибке
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        let okAction = UIAlertAction(title: "Ок", style: UIAlertActionStyle.default) {
+            (result : UIAlertAction) -> Void in
+        }
+        
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    
+    
     //войти
     @IBAction func createAcount(_ sender: UIButton) {
         
+        //не помню заче это нужно
          let revealViewController:SWRevealViewController = self.revealViewController()
         
         if phoneNumberText.text == "" || passwordText.text == "" {
-            //вывод сообщения о oшибке
-            let alertController = UIAlertController(title: "Ошибка", message: "Есть пустые поля", preferredStyle: UIAlertControllerStyle.alert) //Replace UIAlertControllerStyle.Alert by UIAlertControllerStyle.alert
-            
-            let okAction = UIAlertAction(title: "Ок", style: UIAlertActionStyle.default) {
-                (result : UIAlertAction) -> Void in
-            }
-            
-            alertController.addAction(okAction)
-            self.present(alertController, animated: true, completion: nil)
-            
+            self.alertMessage(title: "Ошибка", message: "Есть пустые поля")
             
         } else {
             
             //создать окошко алерт оповещающее о том что производится попытка входа
+            //добавить ездещий танчик!!!!!
             
-            
-            let json = ["phone_number": Int(phoneNumberText.text!),
-                        "password": passwordText.text] as [String : Any]
-    /*
-             Alamofire.request("http://oasushqg.beget.tech/user/create", method: .post, parameters: json, encoding: JSONEncoding.default)
+            //анрапаем так как поля точно не пустые
+            let json = ["phone_number": Int(phoneNumberText.text!)!,
+                        "password": passwordText.text!] as [String : Any]
+    
+             Alamofire.request(urlLogin, method: .post, parameters: json, encoding: JSONEncoding.default)
              .responseJSON { response in
+                
+                //создать окошко алерт оповещающее о том что производится попытка входа
+                //добавить ездещий танчик
+                
+                
         /*
              print("response------>>>>>")
              print(response)
@@ -107,15 +125,26 @@ class LogInViewController: UIViewController {
              print(response.result)   // result of response serialization
              print("json = response.result.value======>>>")
         */
+                
              if let json = response.result.value {
              //print("JSON: \(json)")
                 let json2 = JSON(json)
-                let message = json2["message"]
+                
+                //  ВОЗМОЖНА ОШИБКА РОЗПАРСИВАНИЯ
+                
+                let message = json2["message"] as! String
                 //обпаботка сообщение которое вернет сервер
-             
+                
+                //рпользователь вошел успешно
+             if message == "OK"{
+                let singleton = Singleton.shared
+                singleton.change()
+             } else {
+                //пользователь вошел не успешно
+                self.alertMessage(title: "Ошибка", message: message)
                 }
              }
-    */
+    
             
             let tmp = Singleton.shared
             tmp.change()
@@ -127,4 +156,5 @@ class LogInViewController: UIViewController {
             
         }
     }
+}
 }

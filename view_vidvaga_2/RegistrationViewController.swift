@@ -31,6 +31,8 @@ class RegistrationViewController: UIViewController {
     
     var json:[String : Any] = [:]
 
+    //MARK: - Start
+    
     @IBAction func save(_ sender: UIBarButtonItem) {
         
         if password.text == repit_password.text {
@@ -51,6 +53,11 @@ class RegistrationViewController: UIViewController {
          Alamofire.request(urlRegistration, method: .post, parameters: json, encoding: JSONEncoding.default)
          .responseJSON { response in
             
+            //создать окошко алерт оповещающее о том что производится попытка входа
+            //добавить ездещий танчик!!!!
+
+            
+            
          /*
          print("response------>>>>>")
          print(response)
@@ -70,37 +77,42 @@ class RegistrationViewController: UIViewController {
                 let json2 = JSON(json)
                 let message = json2["message"]
                 //обпаботка сообщение которое вернет сервер
+                if message == "Ok" {
+                    self.alertMessage(title: "", message: "Реєстрація пройша успішно")
+                }
             }
          }
             //если пароли не совпадают
         } else {
-            
-            //вывод сообщения о oшибке
-            let alertController = UIAlertController(title: "Ошибка", message: "Пароли не совпадают", preferredStyle: UIAlertControllerStyle.alert)
-            
-            let okAction = UIAlertAction(title: "Ок", style: UIAlertActionStyle.default) {
-                (result : UIAlertAction) -> Void in
-            }
-            
-            alertController.addAction(okAction)
-            self.present(alertController, animated: true, completion: nil)
+            self.alertMessage(title: "Помилка", message: "Паролі не збігаються")
         }
-        
     }
     
+    func alertMessage(title:String,message: String) {
+        
+        //вывод сообщения о oшибке
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        let okAction = UIAlertAction(title: "Ок", style: UIAlertActionStyle.default) {
+            (result : UIAlertAction) -> Void in
+        }
+        
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
   
-  
-    
     //отлавливаем изменение в текстовых полях
     //что бы включить кнопку регестрация когда все поля будут заполнены
     func textFieldDidChange(_ textField: UITextField) {
         if password.text != "" && repit_password.text != "" && name.text != "" && id.text != "" && phone.text != "" {
-                registerButton.isEnabled = true
+            registerButton.isEnabled = true
         }
-        print("didChange \(textField)")
+        //если хоть что то не заполнено
+        if password.text == "" || repit_password.text == "" || name.text == "" || id.text == "" || phone.text == "" {
+            registerButton.isEnabled = false
+        }
     }
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
