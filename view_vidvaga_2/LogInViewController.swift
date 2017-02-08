@@ -67,7 +67,7 @@ class LogInViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    //войти
     @IBAction func createAcount(_ sender: UIButton) {
         
          let revealViewController:SWRevealViewController = self.revealViewController()
@@ -85,8 +85,6 @@ class LogInViewController: UIViewController {
             
             
         } else {
-            
-            
             
             //создать окошко алерт оповещающее о том что производится попытка входа
             
@@ -128,20 +126,5 @@ class LogInViewController: UIViewController {
             revealViewController.pushFrontViewController(newFrontViewController, animated: true)
             
         }
-
-        
-        
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

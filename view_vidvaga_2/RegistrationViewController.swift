@@ -8,10 +8,11 @@
 
 import UIKit
 import TextFieldEffects
+import Alamofire
+import SwiftyJSON
 
 class RegistrationViewController: UIViewController {
 
-    
     @IBOutlet weak var password: IsaoTextField!
     
     @IBOutlet weak var repit_password: IsaoTextField!
@@ -24,14 +25,74 @@ class RegistrationViewController: UIViewController {
     
     @IBOutlet weak var phone: IsaoTextField!
     
+    @IBOutlet weak var registerButton: UIBarButtonItem!
+    
+    let urlRegistration = "http://oasushqg.beget.tech/user/create"
+    
+    var json:[String : Any] = [:]
+
     @IBAction func save(_ sender: UIBarButtonItem) {
+        
+        if password.text == repit_password.text {
+            
+        //создание json для пересылки
+        //так как мы не можем зайти сюда если будут пустые поля
+        //то мы смело анрапаем
+        json = ["phone_number": Int(phone.text!)!,
+                    "password": password.text!,
+                 "military_id":id,
+                        "name":name] as [String : Any]
+            //если у нас есть email
+            if email.text != "" {
+                json["email"] = email
+            }
+            
+        //запрос
+         Alamofire.request(urlRegistration, method: .post, parameters: json, encoding: JSONEncoding.default)
+         .responseJSON { response in
+            
+         /*
+         print("response------>>>>>")
+         print(response)
+         print("response.request----->>>>>")
+         print(response.request)  // original URL request
+         print("response.response---->>>>>")
+         print(response.response) // URL response
+         print("response.data---->>>>>")
+         print(response.data)     // server data
+         print("response.result----->>>>")
+         print(response.result)   // result of response serialization
+         print("json = response.result.value======>>>")
+         */
+            
+            if let json = response.result.value {
+                //print("JSON: \(json)")
+                let json2 = JSON(json)
+                let message = json2["message"]
+                //обпаботка сообщение которое вернет сервер
+            }
+         }
+            //если пароли не совпадают
+        } else {
+            
+            //вывод сообщения о oшибке
+            let alertController = UIAlertController(title: "Ошибка", message: "Пароли не совпадают", preferredStyle: UIAlertControllerStyle.alert)
+            
+            let okAction = UIAlertAction(title: "Ок", style: UIAlertActionStyle.default) {
+                (result : UIAlertAction) -> Void in
+            }
+            
+            alertController.addAction(okAction)
+            self.present(alertController, animated: true, completion: nil)
+        }
         
     }
     
-    @IBOutlet weak var registerButton: UIBarButtonItem!
+  
   
     
-    
+    //отлавливаем изменение в текстовых полях
+    //что бы включить кнопку регестрация когда все поля будут заполнены
     func textFieldDidChange(_ textField: UITextField) {
         if password.text != "" && repit_password.text != "" && name.text != "" && id.text != "" && phone.text != "" {
                 registerButton.isEnabled = true
@@ -43,22 +104,15 @@ class RegistrationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.backBarButtonItem?.title = "Назад"
-        
         password.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         repit_password.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         name.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         id.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         phone.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
-        
-        
 }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    
 }
