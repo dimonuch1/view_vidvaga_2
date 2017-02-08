@@ -112,12 +112,37 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
             revealViewController.pushFrontViewController(newFrontViewController, animated: true)
         }
         if cell.lblMemu.text! == "Выйти" {
-            let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let desController = mainStoryboard.instantiateViewController(withIdentifier: "zaregalsa") as! SingInMenuViewController
-            let newFrontViewController = UINavigationController.init(rootViewController: desController)
-            revealViewController.pushFrontViewController(newFrontViewController, animated: true)
+            alertAboutExit()
         }
+        
+        
     }
+    
+    func alertAboutExit() {
+        
+        //вывод сообщения о выходе
+        let alertController = UIAlertController(title: "Выход", message: "Вы уверенные что хотите выйти?", preferredStyle: UIAlertControllerStyle.alert)
+        
+        let noAction = UIAlertAction(title: "Нет", style: UIAlertActionStyle.default) {
+            (result: UIAlertAction) -> Void in
+            print("press no exit")
+        }
+        
+        let okAction = UIAlertAction(title: "Да", style: UIAlertActionStyle.default) {
+            (result : UIAlertAction) -> Void in
+            print("exit")
+            var tmp = Singleton.shared
+            tmp.change()
+            //self.tableMenu.reloadData()
+            self.viewDidAppear(true)
+        }
+        
+        alertController.addAction(noAction)
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
+        
+    }
+
 }
 
 

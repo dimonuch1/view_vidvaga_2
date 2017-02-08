@@ -13,6 +13,7 @@ import TextFieldEffects
 
 class LogInViewController: UIViewController {
 
+    //MARK: - Outlets
     
     @IBOutlet weak var btnMenu: UIBarButtonItem!
 
@@ -21,10 +22,14 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var passwordText: UITextField!
 
     
+    
+    @IBOutlet weak var registerButton: UIButton!
    
     @IBOutlet weak var enterBottom: UIButton!
     
     @IBOutlet weak var registrationButtom: UIButton!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +51,13 @@ class LogInViewController: UIViewController {
         registrationButtom.layer.cornerRadius = 5
         registrationButtom.layer.borderWidth = 1
         registrationButtom.layer.borderColor = UIColor.black.cgColor
+        
+        let singleton = Singleton.shared
+        
+        if singleton.login == true {
+            enterBottom.isEnabled = false
+            registerButton.isEnabled = false
+        }
 
         
     }
@@ -58,6 +70,7 @@ class LogInViewController: UIViewController {
     
     @IBAction func createAcount(_ sender: UIButton) {
         
+         let revealViewController:SWRevealViewController = self.revealViewController()
         
         if phoneNumberText.text == "" || passwordText.text == "" {
             //вывод сообщения о oшибке
@@ -72,11 +85,18 @@ class LogInViewController: UIViewController {
             
             
         } else {
+            
+            
+            
+            //создать окошко алерт оповещающее о том что производится попытка входа
+            
+            
             let json = ["phone_number": Int(phoneNumberText.text!),
                         "password": passwordText.text] as [String : Any]
-            /*
+    /*
              Alamofire.request("http://oasushqg.beget.tech/user/create", method: .post, parameters: json, encoding: JSONEncoding.default)
              .responseJSON { response in
+        /*
              print("response------>>>>>")
              print(response)
              print("response.request----->>>>>")
@@ -88,15 +108,24 @@ class LogInViewController: UIViewController {
              print("response.result----->>>>")
              print(response.result)   // result of response serialization
              print("json = response.result.value======>>>")
+        */
              if let json = response.result.value {
-             print("JSON: \(json)")
+             //print("JSON: \(json)")
+                let json2 = JSON(json)
+                let message = json2["message"]
+                //обпаботка сообщение которое вернет сервер
+             
+                }
              }
-             }
-             */
+    */
             
             let tmp = Singleton.shared
             tmp.change()
             //MenuViewController.updateTableMy()
+            let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let desController = mainStoryboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+            let newFrontViewController = UINavigationController.init(rootViewController: desController)
+            revealViewController.pushFrontViewController(newFrontViewController, animated: true)
             
         }
 

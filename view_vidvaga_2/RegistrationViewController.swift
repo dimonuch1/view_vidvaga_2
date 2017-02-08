@@ -28,10 +28,29 @@ class RegistrationViewController: UIViewController {
         
     }
     
+    @IBOutlet weak var registerButton: UIBarButtonItem!
+  
+    
+    
+    func textFieldDidChange(_ textField: UITextField) {
+        if password.text != "" && repit_password.text != "" && name.text != "" && id.text != "" && phone.text != "" {
+                registerButton.isEnabled = true
+        }
+        print("didChange \(textField)")
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.navigationItem.backBarButtonItem?.title = "Назад"
+        
+        password.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        repit_password.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        name.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        id.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        phone.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        
         
 }
 
@@ -41,14 +60,5 @@ class RegistrationViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }
