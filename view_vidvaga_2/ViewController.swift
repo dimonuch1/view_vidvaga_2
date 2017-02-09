@@ -74,11 +74,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
         
-        for var i in 0...5 {
+        for i in 0...5 {
             mainEvent.append("Новость про АТО номер \(i)")
         }
         
-        for var i in 0...5 {
+        for i in 0...5 {
             helperTextArray.append("Helper text number \(i)")
         }
        
@@ -109,7 +109,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         button.setImage(UIImage.init(named: "1.png"), for: UIControlState.normal)
         button.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
         
-        var barButton = UIBarButtonItem(customView: button)
+        let barButton = UIBarButtonItem(customView: button)
         
        barButton.target = revealViewController()
        barButton.action = #selector(SWRevealViewController.revealToggle(_:))
@@ -297,7 +297,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         do{
             let result = try managedObjectContext.fetch(MainEventTable.fetchRequest())
             
-            for var tmp in result as! [NSManagedObject] {
+            for tmp in result as! [NSManagedObject] {
                 if let mainText = tmp.value(forKey: "mainEventText") {
                     print(mainText)
                 }
@@ -335,7 +335,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         do{
             let result = try managedObjectContext.fetch(BookmarksEvent.fetchRequest())
             
-            for var tmp in result as! [NSManagedObject] {
+            for tmp in result as! [NSManagedObject] {
                 if let mainText = tmp.value(forKey: "mainEventText") {
                     print(mainText)
                 }

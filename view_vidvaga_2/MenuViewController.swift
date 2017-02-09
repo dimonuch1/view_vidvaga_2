@@ -34,24 +34,22 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         
     }
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
-    
     override func viewDidAppear(_ animated: Bool) {
         
-        menuNameArray = ["Главная","Сообщения","Настройки"]
+        menuNameArray = ["Новини","Повідомлення","Налаштунки"]
         
-        var tmp = Singleton.shared  // Singleton
+        let tmp = Singleton.shared  // Singleton
         
         if  tmp.login == false {
-            menuNameArray += ["Войти"]
+            menuNameArray += ["Увійти"]
         } else {
-            menuNameArray += ["Выйти"]
+            menuNameArray += ["Вийти"]
         }
         
         iconeImage = [UIImage(named:"home")!,UIImage(named:"message")!,UIImage(named:"settings")!,UIImage(named:"log_out")!]
@@ -92,48 +90,48 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell:MenuTableViewCell = tableView.cellForRow(at: indexPath) as! MenuTableViewCell
         
         //обработка нажаний
-        
-        if cell.lblMemu.text! == "Главная" {
+        //переходы в меню
+        if cell.lblMemu.text! == "Новини" {
             let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let desController = mainStoryboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
             let newFrontViewController = UINavigationController.init(rootViewController: desController)
             revealViewController.pushFrontViewController(newFrontViewController, animated: true)
         }
-        if cell.lblMemu.text! == "Сообщения"{
+        if cell.lblMemu.text! == "Повідомлення"{
             let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let desController = mainStoryboard.instantiateViewController(withIdentifier: "MassegeViewController") as! MassegeViewController
             let newFrontViewController = UINavigationController.init(rootViewController: desController)
             revealViewController.pushFrontViewController(newFrontViewController, animated: true)
         }
-        if cell.lblMemu.text! == "Войти" {
+        if cell.lblMemu.text! == "Увійти" {
             let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let desController = mainStoryboard.instantiateViewController(withIdentifier: "LogInViewController") as! LogInViewController
             let newFrontViewController = UINavigationController.init(rootViewController: desController)
             revealViewController.pushFrontViewController(newFrontViewController, animated: true)
         }
-        if cell.lblMemu.text! == "Выйти" {
+        if cell.lblMemu.text! == "Вийти" {
             alertAboutExit()
         }
-        
-        
     }
     
     func alertAboutExit() {
         
         //вывод сообщения о выходе
-        let alertController = UIAlertController(title: "Выход", message: "Вы уверенные что хотите выйти?", preferredStyle: UIAlertControllerStyle.alert)
+        let alertController = UIAlertController(title: "Вихід", message: "Ви впевненні що хочете вийти?", preferredStyle: UIAlertControllerStyle.alert)
         
-        let noAction = UIAlertAction(title: "Нет", style: UIAlertActionStyle.default) {
+        let noAction = UIAlertAction(title: "Ні", style: UIAlertActionStyle.default) {
             (result: UIAlertAction) -> Void in
-            print("press no exit")
         }
         
-        let okAction = UIAlertAction(title: "Да", style: UIAlertActionStyle.default) {
+        let okAction = UIAlertAction(title: "Так", style: UIAlertActionStyle.default) {
             (result : UIAlertAction) -> Void in
-            print("exit")
-            var tmp = Singleton.shared
-            tmp.change()
-            //self.tableMenu.reloadData()
+            let tmp = Singleton.shared
+            tmp.login = false
+            let defaults = UserDefaults.standard
+            defaults.set(tmp.login, forKey: "login")
+            defaults.synchronize()
+            
+            //вызываем для изменения меню
             self.viewDidAppear(true)
         }
         

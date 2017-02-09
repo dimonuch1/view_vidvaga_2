@@ -24,7 +24,6 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var passwordText: UITextField!
 
     
-    
     @IBOutlet weak var registerButton: UIButton!
    
     @IBOutlet weak var enterBottom: UIButton!
@@ -62,15 +61,12 @@ class LogInViewController: UIViewController {
             enterBottom.isEnabled = false
             registerButton.isEnabled = false
         }
-
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     
     func alertMessage(title:String,message:String) {
@@ -84,7 +80,6 @@ class LogInViewController: UIViewController {
         alertController.addAction(okAction)
         self.present(alertController, animated: true, completion: nil)
     }
-    
     
     
     //войти
@@ -102,58 +97,43 @@ class LogInViewController: UIViewController {
             //добавить ездещий танчик!!!!!
             
             //анрапаем так как поля точно не пустые
-            let json = ["phone_number": Int(phoneNumberText.text!)!,
+            let json = ["phone_number": phoneNumberText.text!,
                         "password": passwordText.text!] as [String : Any]
     
              Alamofire.request(urlLogin, method: .post, parameters: json, encoding: JSONEncoding.default)
              .responseJSON { response in
-                
+                print("Alamofire1")
                 //создать окошко алерт оповещающее о том что производится попытка входа
                 //добавить ездещий танчик
                 
-                
-        /*
-             print("response------>>>>>")
-             print(response)
-             print("response.request----->>>>>")
-             print(response.request)  // original URL request
-             print("response.response---->>>>>")
-             print(response.response) // URL response
-             print("response.data---->>>>>")
-             print(response.data)     // server data
-             print("response.result----->>>>")
-             print(response.result)   // result of response serialization
-             print("json = response.result.value======>>>")
-        */
-                
              if let json = response.result.value {
-             //print("JSON: \(json)")
+                
                 let json2 = JSON(json)
                 
                 //  ВОЗМОЖНА ОШИБКА РОЗПАРСИВАНИЯ
                 
-                let message = json2["message"] as! String
+                let message = json2["message"].string
                 //обпаботка сообщение которое вернет сервер
                 
                 //рпользователь вошел успешно
              if message == "OK"{
+                print("Alamofire2")
                 let singleton = Singleton.shared
-                singleton.change()
+                singleton.login = true
+                let defaults = UserDefaults.standard
+                defaults.set(true, forKey: "login")
+                defaults.synchronize()
              } else {
                 //пользователь вошел не успешно
-                self.alertMessage(title: "Ошибка", message: message)
+                self.alertMessage(title: "Ошибка", message: message!)
                 }
              }
     
-            
-            let tmp = Singleton.shared
-            tmp.change()
             //MenuViewController.updateTableMy()
             let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let desController = mainStoryboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
             let newFrontViewController = UINavigationController.init(rootViewController: desController)
             revealViewController.pushFrontViewController(newFrontViewController, animated: true)
-            
         }
     }
 }

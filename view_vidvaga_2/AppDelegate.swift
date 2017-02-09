@@ -18,10 +18,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        
-        
+        //определяем залогиненость пользователя
+        definitionLogin()
         
         return true
+    }
+    
+    func definitionLogin() {
+        
+        let singleton = Singleton.shared
+        //print("singletone = \(singleton.login)")
+        let defaults = UserDefaults.standard
+        //print("defaults = \(defaults.value(forKey: "login"))")
+
+        if isKeyPresentInUserDefaults(key: "login"){
+            
+            if defaults.value(forKey: "login") as! Bool == true {
+                singleton.login = true
+            } else {
+              singleton.login = false
+            }
+        } else {
+            singleton.login = false
+        }
+        
+        print(singleton.login)
+    }
+    
+    //проверка на существования такого ключа
+    func isKeyPresentInUserDefaults(key: String) -> Bool {
+        return UserDefaults.standard.object(forKey: key) != nil
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

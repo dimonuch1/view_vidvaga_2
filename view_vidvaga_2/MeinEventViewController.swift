@@ -24,7 +24,7 @@ class MeinEventViewController: UIViewController, UITableViewDelegate, UITableVie
         // Do any additional setup after loading the view.
         mainEvent.append("Новость про АТО номер 1")
         
-        for var i in 1...20 {
+        for i in 1...20 {
              mainEvent.append("Новость про АТО номер \(i)")
         }
         mainEventImage = ["ukr","ukr2","ukr3","ukr4","ukr5","ukr6"]

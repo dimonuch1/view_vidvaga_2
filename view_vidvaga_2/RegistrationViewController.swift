@@ -13,21 +13,21 @@ import SwiftyJSON
 
 class RegistrationViewController: UIViewController {
 
-    @IBOutlet weak var password: IsaoTextField!
+    @IBOutlet weak var password: UITextField!
     
-    @IBOutlet weak var repit_password: IsaoTextField!
+    @IBOutlet weak var repit_password: UITextField!
     
-    @IBOutlet weak var email: IsaoTextField!
+    @IBOutlet weak var email: UITextField!
     
-    @IBOutlet weak var name: IsaoTextField!
+    @IBOutlet weak var id: UITextField!
     
-    @IBOutlet weak var id: IsaoTextField!
-    
-    @IBOutlet weak var phone: IsaoTextField!
+    @IBOutlet weak var phone: UITextField!
     
     @IBOutlet weak var registerButton: UIBarButtonItem!
     
-    let urlRegistration = "http://oasushqg.beget.tech/user/create"
+    let urlRegistration = "http://oasushqg.beget.tech/users"
+    
+   
     
     var json:[String : Any] = [:]
 
@@ -40,13 +40,12 @@ class RegistrationViewController: UIViewController {
         //создание json для пересылки
         //так как мы не можем зайти сюда если будут пустые поля
         //то мы смело анрапаем
-        json = ["phone_number": Int(phone.text!)!,
+        json = ["phone_number": phone.text!,
                     "password": password.text!,
-                 "military_id":id,
-                        "name":name] as [String : Any]
+                 "military_id":Int(id.text!)!] as [String : Any]
             //если у нас есть email
             if email.text != "" {
-                json["email"] = email
+                json["email"] = email.text
             }
             
         //запрос
@@ -56,8 +55,6 @@ class RegistrationViewController: UIViewController {
             //создать окошко алерт оповещающее о том что производится попытка входа
             //добавить ездещий танчик!!!!
 
-            
-            
          /*
          print("response------>>>>>")
          print(response)
@@ -75,13 +72,28 @@ class RegistrationViewController: UIViewController {
             if let json = response.result.value {
                 //print("JSON: \(json)")
                 let json2 = JSON(json)
-                let message = json2["message"]
+                let message = json2["message"].string
                 //обпаботка сообщение которое вернет сервер
                 if message == "Ok" {
-                    self.alertMessage(title: "", message: "Реєстрація пройша успішно")
+                    self.alertMessage(title: "Реєстрація пройша успішно", message: "Дочекайтеся SMS пароля для підтвердження")
+                    
+                     //переход на окно отправки смс пароля
+                    
+                    //что то важное
+                    let revealViewController:SWRevealViewController = self.revealViewController()
+
+                    let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let desController = mainStoryboard.instantiateViewController(withIdentifier: "DeteilEventViewController") as! DeteilEventViewController
+                    
+                    let newFrontViewController = UINavigationController.init(rootViewController: desController)
+                    revealViewController.pushFrontViewController(newFrontViewController, animated: true)
+                } else {
+                    self.alertMessage(title: "Помилка", message: message!)
                 }
             }
          }
+            
+           
             //если пароли не совпадают
         } else {
             self.alertMessage(title: "Помилка", message: "Паролі не збігаються")
@@ -104,11 +116,11 @@ class RegistrationViewController: UIViewController {
     //отлавливаем изменение в текстовых полях
     //что бы включить кнопку регестрация когда все поля будут заполнены
     func textFieldDidChange(_ textField: UITextField) {
-        if password.text != "" && repit_password.text != "" && name.text != "" && id.text != "" && phone.text != "" {
+        if password.text != "" && repit_password.text != "" && id.text != "" && phone.text != "" {
             registerButton.isEnabled = true
         }
         //если хоть что то не заполнено
-        if password.text == "" || repit_password.text == "" || name.text == "" || id.text == "" || phone.text == "" {
+        if password.text == "" || repit_password.text == "" || id.text == "" || phone.text == "" {
             registerButton.isEnabled = false
         }
     }
@@ -118,7 +130,6 @@ class RegistrationViewController: UIViewController {
         
         password.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         repit_password.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
-        name.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         id.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         phone.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
 }
@@ -128,3 +139,55 @@ class RegistrationViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 }
+
+//MARK: - SmsRegistration
+
+class SmsRegistration:UIViewController {
+    
+    //необходимое количество цифер для пароля
+    let COUNT_CHARACTERS_SMS = 4
+    
+     let urlSmsRegistration = "site_domain/api/users/verify"
+    
+    @IBOutlet weak var sendSmsCode: UIBarButtonItem!
+    
+    @IBOutlet weak var smsPassord: IsaoTextField!
+    @IBAction func sendButton(_ sender: UIBarButtonItem) {
+        
+        let json = ["code":Int(smsPassord.text!)!] as [String:Int]
+        
+        Alamofire.request(urlSmsRegistration, method: .post, parameters: json, encoding: JSONEncoding.default)
+            .responseJSON { response in
+                
+                if let json = response.result.value {
+                    let json2 = JSON(json)
+                    let message = json2["message"]
+                    //обпаботка сообщение которое вернет сервер
+                    if message == "Ok" {
+                       
+                    }
+                }
+        }
+
+        
+    }
+
+    func textFieldDidChange(_ textField: UITextField) {
+    
+        if smsPassord.text?.characters.count == COUNT_CHARACTERS_SMS {
+            smsPassord.isEnabled = true
+        } else {
+            smsPassord.isEnabled = false
+        }
+    }
+
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        smsPassord.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        
+    }
+    
+}
+
