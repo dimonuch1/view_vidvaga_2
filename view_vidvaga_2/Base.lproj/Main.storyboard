@@ -57,7 +57,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qU5-ko-7Fi" id="U2h-8J-HLK">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8ao-D7-tDS">
@@ -120,9 +120,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="телефон(0981234567)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tgg-uo-hNp" customClass="IsaoTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="53" y="95" width="268" height="45.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="телефон(0981234567)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tgg-uo-hNp" customClass="IsaoTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="53" y="70" width="269" height="45.5"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -135,9 +134,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xd1-eW-VfH" customClass="IsaoTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="53" y="154.5" width="268" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xd1-eW-VfH" customClass="IsaoTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="53" y="129" width="268" height="46"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -150,10 +148,12 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOa-Vm-3DO">
-                                <rect key="frame" x="53" y="206.5" width="100" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOa-Vm-3DO">
+                                <rect key="frame" x="53" y="197" width="100" height="30"/>
                                 <color key="backgroundColor" red="0.17436462640762329" green="0.75227558612823486" blue="0.082468174397945404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="RGe-m0-6c8"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Реєстрація"/>
@@ -161,10 +161,12 @@
                                     <segue destination="IMC-Bc-o2B" kind="push" id="JJg-yN-Don"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalCompressionResistancePriority="751" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c01-zG-3Ob">
-                                <rect key="frame" x="256" y="207" width="65" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c01-zG-3Ob">
+                                <rect key="frame" x="257" y="196.5" width="65" height="30"/>
                                 <color key="backgroundColor" red="0.17436462640762329" green="0.75227558612823486" blue="0.082468174397945404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="l5X-Xg-vCu"/>
+                                </constraints>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Увійти"/>
                                 <connections>
@@ -173,6 +175,19 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Xd1-eW-VfH" firstAttribute="centerX" secondItem="9RA-DU-QYF" secondAttribute="centerX" id="3du-uG-SNb"/>
+                            <constraint firstItem="Xd1-eW-VfH" firstAttribute="top" secondItem="tgg-uo-hNp" secondAttribute="bottom" constant="14" id="6zD-ty-gap"/>
+                            <constraint firstItem="c01-zG-3Ob" firstAttribute="top" secondItem="Xd1-eW-VfH" secondAttribute="bottom" constant="22" id="7W8-fN-lvQ"/>
+                            <constraint firstItem="KOa-Vm-3DO" firstAttribute="top" secondItem="Xd1-eW-VfH" secondAttribute="bottom" constant="22" id="CDo-rA-yOo"/>
+                            <constraint firstItem="tgg-uo-hNp" firstAttribute="top" secondItem="o1t-Iw-SAq" secondAttribute="bottom" constant="50" id="FaA-dT-o9S"/>
+                            <constraint firstItem="Xd1-eW-VfH" firstAttribute="leading" secondItem="9RA-DU-QYF" secondAttribute="leadingMargin" constant="37" id="JfY-Lb-BWa"/>
+                            <constraint firstItem="KOa-Vm-3DO" firstAttribute="leading" secondItem="9RA-DU-QYF" secondAttribute="leadingMargin" constant="37" id="YjW-6y-c9s"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tgg-uo-hNp" secondAttribute="trailing" constant="37" id="dVF-tB-Q8s"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="c01-zG-3Ob" secondAttribute="trailing" constant="37" id="eeH-uG-WnR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Xd1-eW-VfH" secondAttribute="trailing" constant="38" id="qYn-jF-Fqq"/>
+                            <constraint firstItem="tgg-uo-hNp" firstAttribute="leading" secondItem="9RA-DU-QYF" secondAttribute="leadingMargin" constant="37" id="trJ-39-Bxu"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Увійти" id="9Da-8Z-o6T">
                         <barButtonItem key="leftBarButtonItem" title="Меню" id="Brx-4F-3Lt"/>
@@ -203,9 +218,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+38097264874" placeholder="телефон*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EwQ-E4-8Zn" customClass="IsaoTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="16" y="69" width="343" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0972648745" placeholder="телефон*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EwQ-E4-8Zn" customClass="IsaoTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="41" y="50" width="293" height="40"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -218,24 +232,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="yoyoy@gmail.com" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jMg-7c-b2U" customClass="IsaoTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="16" y="148" width="343" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
-                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
-                                        <color key="value" red="0.17436462640762329" green="0.75227558612823486" blue="0.082468174397945404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="12345" placeholder="пароль*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UyT-g7-JVF" customClass="IsaoTextField" customModule="TextFieldEffects">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="пароль*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UyT-g7-JVF" customClass="IsaoTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="16" y="196" width="130" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="vHi-GO-cLz"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -248,9 +249,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="666666" placeholder="АТО id*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TD7-ga-o3g" customClass="IsaoTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="16" y="108" width="343" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="12345" placeholder="АТО id*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TD7-ga-o3g" customClass="IsaoTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="41" y="90" width="293" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="wD1-LL-EpN"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -263,9 +266,25 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="12345" placeholder="повторить пароль*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OIJ-Zn-iGC" customClass="IsaoTextField" customModule="TextFieldEffects">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="повторить пароль*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OIJ-Zn-iGC" customClass="IsaoTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="229" y="196" width="130" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="7QJ-1e-ZWd"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                        <color key="value" red="0.17436462640762329" green="0.75227558612823486" blue="0.082468174397945404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="hg@kk.ll" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jMg-7c-b2U" customClass="IsaoTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="41" y="130" width="299" height="40"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -280,6 +299,23 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EwQ-E4-8Zn" firstAttribute="top" secondItem="6ol-dy-5Bp" secondAttribute="bottom" constant="30" id="2EJ-Wj-aza"/>
+                            <constraint firstItem="jMg-7c-b2U" firstAttribute="top" secondItem="6ol-dy-5Bp" secondAttribute="bottom" constant="110" id="6Kb-O3-Fig"/>
+                            <constraint firstItem="OIJ-Zn-iGC" firstAttribute="trailing" secondItem="lCM-Rv-DZ8" secondAttribute="trailingMargin" constant="10" id="FRv-lF-SWN"/>
+                            <constraint firstItem="jMg-7c-b2U" firstAttribute="leading" secondItem="TD7-ga-o3g" secondAttribute="leading" id="GSb-ey-pxH"/>
+                            <constraint firstItem="OIJ-Zn-iGC" firstAttribute="top" secondItem="6ol-dy-5Bp" secondAttribute="bottom" constant="150" id="GsK-Od-7Gq"/>
+                            <constraint firstItem="TD7-ga-o3g" firstAttribute="top" secondItem="6ol-dy-5Bp" secondAttribute="bottom" constant="70" id="SDv-a5-rW9"/>
+                            <constraint firstItem="UyT-g7-JVF" firstAttribute="top" secondItem="6ol-dy-5Bp" secondAttribute="bottom" constant="150" id="SHF-gD-iCg"/>
+                            <constraint firstItem="OIJ-Zn-iGC" firstAttribute="leading" secondItem="UyT-g7-JVF" secondAttribute="trailing" constant="10" id="U8w-m6-fFO"/>
+                            <constraint firstItem="TD7-ga-o3g" firstAttribute="trailing" secondItem="EwQ-E4-8Zn" secondAttribute="trailing" id="cG5-iF-GPG"/>
+                            <constraint firstItem="UyT-g7-JVF" firstAttribute="leading" secondItem="lCM-Rv-DZ8" secondAttribute="leadingMargin" constant="10" id="cdV-dK-AcS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jMg-7c-b2U" secondAttribute="trailing" constant="19" id="gCu-zC-Web"/>
+                            <constraint firstItem="EwQ-E4-8Zn" firstAttribute="leading" secondItem="lCM-Rv-DZ8" secondAttribute="leadingMargin" constant="25" id="kUA-M0-Jhr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EwQ-E4-8Zn" secondAttribute="trailing" constant="25" id="r3a-1N-E2I"/>
+                            <constraint firstItem="TD7-ga-o3g" firstAttribute="leading" secondItem="EwQ-E4-8Zn" secondAttribute="leading" id="wD5-X6-T9d"/>
+                            <constraint firstItem="OIJ-Zn-iGC" firstAttribute="leading" secondItem="UyT-g7-JVF" secondAttribute="trailing" constant="10" id="x7k-Ri-krA"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Реєстрація" id="Fu5-ts-Vkm">
@@ -302,7 +338,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bnq-PE-MDF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2612" y="-420"/>
+            <point key="canvasLocation" x="2612" y="-420.53973013493254"/>
         </scene>
         <!--SMS-->
         <scene sceneID="gsc-C3-hL8">
@@ -316,8 +352,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="sms пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YvW-pl-KT6" customClass="IsaoTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="74" y="144" width="226" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="sms пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YvW-pl-KT6" customClass="IsaoTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="113" y="137" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="3H9-g3-NWB"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
@@ -333,16 +372,26 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Дочекайтеся SMS з паролем" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BdW-Wc-Sk9">
+                                <rect key="frame" x="90" y="205" width="195" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="195" id="H4U-vw-hq7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="RDm-ls-pQl" firstAttribute="top" secondItem="YvW-pl-KT6" secondAttribute="bottom" constant="449" id="BUn-tJ-Jex"/>
-                            <constraint firstItem="YvW-pl-KT6" firstAttribute="centerX" secondItem="Cbo-Lf-Voq" secondAttribute="centerX" id="U2W-jZ-qlz"/>
-                            <constraint firstItem="YvW-pl-KT6" firstAttribute="leading" secondItem="Cbo-Lf-Voq" secondAttribute="leadingMargin" constant="58" id="ZD5-C3-CXe"/>
-                            <constraint firstItem="YvW-pl-KT6" firstAttribute="top" secondItem="NMu-Td-0vG" secondAttribute="bottom" constant="124" id="ho4-PI-wi5"/>
+                            <constraint firstItem="BdW-Wc-Sk9" firstAttribute="top" secondItem="YvW-pl-KT6" secondAttribute="bottom" constant="38" id="0fM-vf-V4F"/>
+                            <constraint firstItem="YvW-pl-KT6" firstAttribute="top" secondItem="NMu-Td-0vG" secondAttribute="bottom" constant="100" id="VOF-UQ-gW4"/>
+                            <constraint firstItem="YvW-pl-KT6" firstAttribute="centerX" secondItem="Cbo-Lf-Voq" secondAttribute="centerX" id="tWz-Zh-Oxh"/>
+                            <constraint firstItem="BdW-Wc-Sk9" firstAttribute="centerX" secondItem="Cbo-Lf-Voq" secondAttribute="centerX" id="zcw-cc-58W"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="SMS" id="bi6-CC-fCh">
+                        <barButtonItem key="leftBarButtonItem" title="Меню" id="acp-FE-pXA"/>
                         <barButtonItem key="rightBarButtonItem" enabled="NO" title="Відправити" id="P03-1L-Adx">
                             <connections>
                                 <action selector="sendButton:" destination="06W-4F-3y2" id="1pd-eg-QPm"/>
@@ -351,13 +400,14 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <connections>
+                        <outlet property="menuButton" destination="acp-FE-pXA" id="Waf-Ae-qze"/>
                         <outlet property="sendSmsCode" destination="P03-1L-Adx" id="ghK-LC-yZB"/>
                         <outlet property="smsPassord" destination="YvW-pl-KT6" id="2ZK-EE-p2I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a4W-i9-yGE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3390" y="-421"/>
+            <point key="canvasLocation" x="3389.5999999999999" y="-421.43928035982015"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="EDt-jt-5QJ">
@@ -379,36 +429,84 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UVz-x7-dRU" id="V6v-rf-yvG">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="129"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="18.01.17 Событие" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qjQ-uk-Dw8">
-                                                    <rect key="frame" x="126" y="-4" width="105" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="18.01.17 Событие" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qjQ-uk-Dw8">
+                                                    <rect key="frame" x="132" y="-7" width="140" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWR-Wm-3up">
-                                                    <rect key="frame" x="126" y="17" width="241" height="55"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <rect key="frame" x="132" y="10" width="243" height="55"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <attributedString key="attributedText">
-                                                        <fragment content="В украине началась борьба с резервистави">
+                                                        <fragment>
+                                                            <string key="content">В украине началась борьба с резервистами очень важная новость про АТО какой то там номер была-боа бла-бла шурмшцукмшгцкгшцушгкуцшгкапшгапшгркашруиашцушцуа</string>
                                                             <attributes>
                                                                 <font key="NSFont" size="18" name="ArialMT"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                    <tabStops>
+                                                                        <textTab alignment="left" location="28">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="56">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="84">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="112">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="140">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="168">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="196">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="224">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="252">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="280">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="308">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="336">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                    </tabStops>
+                                                                </paragraphStyle>
                                                             </attributes>
                                                         </fragment>
                                                     </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y69-9z-m5f">
-                                                    <rect key="frame" x="126" y="75" width="241" height="14"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <rect key="frame" x="132" y="65" width="235" height="41"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <attributedString key="attributedText">
-                                                        <fragment content="Более 1000 резервистов в течении...">
+                                                        <fragment>
+                                                            <mutableString key="content">Got a Swift project using Alamofire that needs to be migrated to Swift 3.0? Then you’ve probably figured out just how painful it can be if you try to just run the Xcode migration tool and figure out all of the errors. Changes to both Swift and Alamofire can make it tough to know just how to update those calls. So let’s look at a few common types of the Alamofire calls in Swift 2.2 and see how we can update them for Swift 3.0.  While this thread is old, I didn't see an answer describing what worked for me, so here goes...
+
+I had this error and visual examination of the storyboard showed that all of the view controllers appeared to be connected to the root view controller.
+
+I tried naming all 17 of the view controllers in the storyboard (as in @bobnoble's answer). I used a naming convention based on the long name of the view controller, e.g. "jvc" for "Jobs View Controller". When I tried to build, I got an error message pointing to one of the view controllers as having a duplicate name. Tracking things down, I found that I had an actual duplicate of a view controller stacked exactly on top of its twin. I suspect it was cut-and-paste damage from a user interface experiment that I didn't back out completely.
+
+Anyway, deleting the unconnected twin solved my problem. After that, I removed all of the VC names as they're not referenced in the code.</mutableString>
                                                             <attributes>
                                                                 <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <font key="NSFont" size="12" name="Helvetica-Light"/>
+                                                                <font key="NSFont" size="12" name="CenturyGothic"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                             </attributes>
                                                         </fragment>
@@ -420,12 +518,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="qjQ-uk-Dw8" secondAttribute="trailing" constant="144" id="Nrh-OR-aMN"/>
-                                                <constraint firstItem="qjQ-uk-Dw8" firstAttribute="top" secondItem="V6v-rf-yvG" secondAttribute="top" constant="-4" id="eWt-Vg-4Yr"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="mainImage" destination="oE8-aR-3wh" id="tGn-2e-owF"/>
                                             <outlet property="textHelper" destination="y69-9z-m5f" id="G7t-66-j9h"/>
                                             <outlet property="textMain" destination="NWR-Wm-3up" id="GZZ-gI-nJt"/>
                                             <outlet property="timeEvent" destination="qjQ-uk-Dw8" id="89v-I3-JcG"/>
@@ -466,7 +561,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RWv-7w-pO1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1738.4000000000001" y="330.58470764617692"/>
+            <point key="canvasLocation" x="1751" y="331"/>
         </scene>
         <!--Новость-->
         <scene sceneID="Bbi-s0-NEv">
@@ -477,43 +572,107 @@
                         <viewControllerLayoutGuide type="bottom" id="ORb-Af-Jmm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="X4a-r8-KnX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hec-0c-Iv2" userLabel="mainText">
-                                <rect key="frame" x="16" y="38" width="343" height="91"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hec-0c-Iv2" userLabel="mainText">
+                                <rect key="frame" x="16" y="40" width="343" height="91"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Label">
+                                    <fragment content="В украине началась борьба с резервистами очень важная новость про АТО какой то там номер была-боа бла-бла ">
                                         <attributes>
-                                            <font key="NSFont" size="18" name="ArialMT"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <font key="NSFont" size="18" name="Arial-BoldMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="28">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="56">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="84">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="112">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="140">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="168">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="196">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="224">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="252">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="280">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="308">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="336">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zib-2k-82L" userLabel="date">
-                                <rect key="frame" x="16" y="141" width="169" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="10.01.2017 Событие" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zib-2k-82L" userLabel="date">
+                                <rect key="frame" x="16" y="130" width="169" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pNt-ET-Z99" userLabel="helperText">
-                                <rect key="frame" x="16" y="368" width="343" height="299"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" misplaced="YES" image="ukr2" translatesAutoresizingMaskIntoConstraints="NO" id="LvG-50-aEV">
+                                <rect key="frame" x="16" y="160" width="240" height="146"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pNt-ET-Z99" userLabel="helperText">
+                                <rect key="frame" x="0.0" y="325" width="375" height="342"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="342" id="b5e-qO-5Cz"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <mutableString key="content">Got a Swift project using Alamofire that needs to be migrated to Swift 3.0? Then you’ve probably figured out just how painful it can be if you try to just run the Xcode migration tool and figure out all of the errors. Changes to both Swift and Alamofire can make it tough to know just how to update those calls. So let’s look at a few common types of the Alamofire calls in Swift 2.2 and see how we can update them for Swift 3.0.  While this thread is old, I didn't see an answer describing what worked for me, so here goes...
+
+I had this error and visual examination of the storyboard showed that all of the view controllers appeared to be connected to the root view controller.
+
+I tried naming all 17 of the view controllers in the storyboard (as in @bobnoble's answer). I used a naming convention based on the long name of the view controller, e.g. "jvc" for "Jobs View Controller". When I tried to build, I got an error message pointing to one of the view controllers as having a duplicate name. Tracking things down, I found that I had an actual duplicate of a view controller stacked exactly on top of its twin. I suspect it was cut-and-paste damage from a user interface experiment that I didn't back out completely.
+
+Anyway, deleting the unconnected twin solved my problem. After that, I removed all of the VC names as they're not referenced in the code.</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="CenturyGothic"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LvG-50-aEV">
-                                <rect key="frame" x="16" y="184" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LvG-50-aEV" firstAttribute="top" secondItem="Zib-2k-82L" secondAttribute="bottom" constant="9" id="7Z5-3M-5yh"/>
+                            <constraint firstAttribute="trailing" secondItem="LvG-50-aEV" secondAttribute="trailing" constant="119" id="Cqr-3l-nYP"/>
+                            <constraint firstItem="hec-0c-Iv2" firstAttribute="leading" secondItem="X4a-r8-KnX" secondAttribute="leading" constant="16" id="Eli-TG-otV"/>
+                            <constraint firstItem="LvG-50-aEV" firstAttribute="leading" secondItem="X4a-r8-KnX" secondAttribute="leading" constant="16" id="UbB-6w-9Jk"/>
+                            <constraint firstAttribute="trailing" secondItem="hec-0c-Iv2" secondAttribute="trailing" constant="16" id="VFy-sV-K9i"/>
+                            <constraint firstItem="Zib-2k-82L" firstAttribute="top" secondItem="KO0-0K-D2h" secondAttribute="bottom" constant="110" id="VLR-OW-QrL"/>
+                            <constraint firstItem="hec-0c-Iv2" firstAttribute="top" secondItem="KO0-0K-D2h" secondAttribute="bottom" constant="20" id="a2n-n0-eMT"/>
+                            <constraint firstItem="pNt-ET-Z99" firstAttribute="top" secondItem="LvG-50-aEV" secondAttribute="bottom" constant="19" id="d8c-dX-yEY"/>
+                            <constraint firstItem="ORb-Af-Jmm" firstAttribute="top" secondItem="pNt-ET-Z99" secondAttribute="bottom" id="idd-bg-6zh"/>
+                            <constraint firstItem="pNt-ET-Z99" firstAttribute="leading" secondItem="X4a-r8-KnX" secondAttribute="leading" id="mrH-8O-fHl"/>
+                            <constraint firstAttribute="trailing" secondItem="pNt-ET-Z99" secondAttribute="trailing" id="obe-m0-5nF"/>
+                            <constraint firstItem="Zib-2k-82L" firstAttribute="leading" secondItem="X4a-r8-KnX" secondAttribute="leading" constant="16" id="tUF-fn-Adz"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Новость" id="ZXJ-in-Vhb">
                         <barButtonItem key="leftBarButtonItem" title="Меню" id="7MY-HU-6c9">
@@ -522,7 +681,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <connections>
                         <outlet property="date" destination="Zib-2k-82L" id="F1Y-s5-UXY"/>
                         <outlet property="helperText" destination="pNt-ET-Z99" id="B2p-Kl-g1U"/>
@@ -533,7 +691,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aet-bU-NZf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2612" y="331"/>
+            <point key="canvasLocation" x="2580" y="330.58470764617692"/>
         </scene>
         <!--Massege View Controller-->
         <scene sceneID="5lW-FN-PE5">
@@ -590,6 +748,7 @@
     <resources>
         <image name="call" width="24" height="24"/>
         <image name="main_image" width="754" height="405"/>
+        <image name="ukr2" width="275" height="183"/>
         <image name="ukr7" width="276" height="183"/>
     </resources>
 </document>

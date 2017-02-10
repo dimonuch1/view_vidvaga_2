@@ -12,12 +12,6 @@
 import UIKit
 
 class MenuEventTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var btnLike: UIButton!
-    
-    @IBOutlet weak var btnDislike: UIButton!
-    
-    @IBOutlet weak var buttonEvent: UIButton!
     
     @IBOutlet weak var timeEvent: UILabel!
     
@@ -25,9 +19,7 @@ class MenuEventTableViewCell: UITableViewCell {
     
     @IBOutlet weak var textHelper: UILabel!
     
-    @IBAction func buttonEventPressed(_ sender: UIButton) {
-        
-    }
+    @IBOutlet weak var mainImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

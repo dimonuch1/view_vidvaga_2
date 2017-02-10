@@ -52,7 +52,7 @@ class MeinEventViewController: UIViewController, UITableViewDelegate, UITableVie
         
        
         
-        cell.buttonEvent.imageView?.image = UIImage(named:"\(mainEventImage[Int(arc4random_uniform(UInt32(mainEventImage.count)))])")
+        cell.mainImage.image = UIImage(named:"\(mainEventImage[Int(arc4random_uniform(UInt32(mainEventImage.count)))])")
 
         cell.textMain.text = mainEvent[Int(arc4random_uniform(UInt32(mainEvent.count)))]
         

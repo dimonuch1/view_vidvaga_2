@@ -25,9 +25,9 @@ class RegistrationViewController: UIViewController {
     
     @IBOutlet weak var registerButton: UIBarButtonItem!
     
-    let urlRegistration = "http://oasushqg.beget.tech/users"
+    //let urlRegistration = "http://oasushqg.beget.tech/users"
     
-   
+   let urlRegistration = "http://y937220i.bget.ru/users"
     
     var json:[String : Any] = [:]
 
@@ -74,8 +74,17 @@ class RegistrationViewController: UIViewController {
                 let json2 = JSON(json)
                 let message = json2["message"].string
                 //обпаботка сообщение которое вернет сервер
-                if message == "Ok" {
+                if message == "ok" {
                     self.alertMessage(title: "Реєстрація пройша успішно", message: "Дочекайтеся SMS пароля для підтвердження")
+                    
+                    //отмечаем вход в систему
+                    /*
+                    let singleton = Singleton.shared
+                    singleton.login = true
+                    let defaults = UserDefaults.standard
+                    defaults.set(true, forKey: "login")
+                    defaults.synchronize()
+                    */
                     
                      //переход на окно отправки смс пароля
                     
@@ -83,7 +92,7 @@ class RegistrationViewController: UIViewController {
                     let revealViewController:SWRevealViewController = self.revealViewController()
 
                     let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                    let desController = mainStoryboard.instantiateViewController(withIdentifier: "DeteilEventViewController") as! DeteilEventViewController
+                    let desController = mainStoryboard.instantiateViewController(withIdentifier: "SmsRegistration") as! SmsRegistration
                     
                     let newFrontViewController = UINavigationController.init(rootViewController: desController)
                     revealViewController.pushFrontViewController(newFrontViewController, animated: true)
@@ -147,7 +156,9 @@ class SmsRegistration:UIViewController {
     //необходимое количество цифер для пароля
     let COUNT_CHARACTERS_SMS = 4
     
-     let urlSmsRegistration = "site_domain/api/users/verify"
+    @IBOutlet weak var menuButton: UIBarButtonItem!
+    
+    let urlSmsRegistration = "site_domain/api/users/verify"
     
     @IBOutlet weak var sendSmsCode: UIBarButtonItem!
     
@@ -186,6 +197,12 @@ class SmsRegistration:UIViewController {
         super.viewDidLoad()
         
         smsPassord.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        
+        //обработка выезжания бокового меню
+        self.menuButton?.target = revealViewController()
+        self.menuButton?.action = #selector(SWRevealViewController.revealToggle(_:))
+        //обработка выезжания скольжением пальца
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
     }
     

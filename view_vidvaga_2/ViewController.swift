@@ -75,7 +75,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         
         for i in 0...5 {
-            mainEvent.append("Новость про АТО номер \(i)")
+            mainEvent.append("В украине началась борьба с резервистами очень важная новость про АТО какой то там номер была-боа бла-бла шурмшцукмшгцкгшцушгкуцшгкапшгапшгркашруиашцушцуа\(i)")
         }
         
         for i in 0...5 {
@@ -144,7 +144,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let cell = tableView.dequeueReusableCell(withIdentifier: identifire, for: indexPath) as? MenuEventTableViewCell
         
-        cell!.buttonEvent.setImage(UIImage(named:"\(mainEventImage[indexPath.row])"), for: UIControlState.normal)
+        //cell!.image.setImage(UIImage(named:"\(mainEventImage[indexPath.row])"), for: UIControlState.normal)
+        
+        cell?.mainImage.image = UIImage(named:"\(mainEventImage[indexPath.row])")
+        
         print(mainEventImage[indexPath.row])
         cell!.textMain.text = mainEvent[indexPath.row]
 
@@ -169,7 +172,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         print(indexPath)
         desController.helperTextTmp = cell.textHelper.text!
         desController.dateTmp = cell.timeEvent.text!
-        desController.imageTmp = (cell.buttonEvent.imageView?.image)!
+        desController.imageTmp = (cell.mainImage.image)!
         
         let newFrontViewController = UINavigationController.init(rootViewController: desController)
         revealViewController.pushFrontViewController(newFrontViewController, animated: true)
@@ -241,39 +244,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
-    // кнопка инфо
-    @IBAction func pressButtonInfo(_ sender: UIButton) {
-        
-    }
-    
-    //дислайк
-    @IBAction func pressButtonDislike(_ sender: UIButton) {
-        
-    }
-    
-    
-    //лайк
-    @IBAction func pressButtonLike(_ sender: UIButton) {
-        
-    }
-    
-    //пойду
-    @IBAction func pressButtonGo(_ sender: UIButton) {
-        
-    }
-    
-    
-    
     // MARK: - CoraData
-    
     
     //получение контекста
     func getContext () -> NSManagedObjectContext {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         return appDelegate.persistentContainer.viewContext
     }
-    
-    
     
     //сохранение в кор дату
     func saveInCoreData(mainText:String , helperText:String) {
@@ -351,7 +328,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
         }
     }
-    
 }
 
 
