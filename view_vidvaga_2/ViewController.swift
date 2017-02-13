@@ -165,14 +165,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = tableView.cellForRow(at: indexPath) as! MenuEventTableViewCell
         
         let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let desController = mainStoryboard.instantiateViewController(withIdentifier: "DeteilEventViewController") as! DeteilEventViewController
+        let desController = mainStoryboard.instantiateViewController(withIdentifier: "MainEventViewController") as! MainEventViewController
     
         desController.mainTextTmp = cell.textMain.text!
         print(cell.textMain.text!)
         print(indexPath)
-        desController.helperTextTmp = cell.textHelper.text!
-        desController.dateTmp = cell.timeEvent.text!
+        desController.helperTextTmp = cell.textHelper.text ?? "no text"
+        desController.dateTmp = cell.timeEvent.text ?? "no date"
         desController.imageTmp = (cell.mainImage.image)!
+        desController.tagsTmp = cell.tags.text ?? "no tags"
         
         let newFrontViewController = UINavigationController.init(rootViewController: desController)
         revealViewController.pushFrontViewController(newFrontViewController, animated: true)

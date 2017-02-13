@@ -81,7 +81,6 @@ class LogInViewController: UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
-    
     //войти
     @IBAction func createAcount(_ sender: UIButton) {
         
@@ -102,7 +101,7 @@ class LogInViewController: UIViewController {
     
              Alamofire.request(urlLogin, method: .post, parameters: json, encoding: JSONEncoding.default)
              .responseJSON { response in
-                print("Alamofire1")
+                
                 //создать окошко алерт оповещающее о том что производится попытка входа
                 //добавить ездещий танчик
                 
@@ -110,14 +109,12 @@ class LogInViewController: UIViewController {
                 
                 let json2 = JSON(json)
                 
-                //  ВОЗМОЖНА ОШИБКА РОЗПАРСИВАНИЯ
-                
                 let message = json2["message"].string
                 //обпаботка сообщение которое вернет сервер
                 
                 //рпользователь вошел успешно
-             if message == "OK"{
-                print("Alamofire2")
+             if message == "ok" {
+                
                 let singleton = Singleton.shared
                 singleton.login = true
                 let defaults = UserDefaults.standard
@@ -129,7 +126,7 @@ class LogInViewController: UIViewController {
                 }
              }
     
-            //MenuViewController.updateTableMy()
+            //переводим на главный экран новостей
             let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let desController = mainStoryboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
             let newFrontViewController = UINavigationController.init(rootViewController: desController)

@@ -21,6 +21,9 @@ class MenuEventTableViewCell: UITableViewCell {
     
     @IBOutlet weak var mainImage: UIImageView!
     
+    @IBOutlet weak var tags: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		810AE4DE1E40A642007E21A7 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810AE4C41E408E80007E21A7 /* KeychainSwift.framework */; };
 		810AE5131E40B74B007E21A7 /* TextFieldEffects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810AE5121E40B740007E21A7 /* TextFieldEffects.framework */; };
+		81105C721E51D99A0016CA3F /* MainEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81105C711E51D99A0016CA3F /* MainEventViewController.swift */; };
 		8110D1991E2F6B0E003854ED /* MenuEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8110D1981E2F6B0E003854ED /* MenuEventTableViewCell.swift */; };
 		8110D19B1E2F7A12003854ED /* MeinEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8110D19A1E2F7A12003854ED /* MeinEventViewController.swift */; };
 		8140A96A1E35FE29001CF18B /* SingInMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8140A9691E35FE29001CF18B /* SingInMenuViewController.swift */; };
@@ -203,6 +204,7 @@
 /* Begin PBXFileReference section */
 		810AE4B71E408E80007E21A7 /* KeychainSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeychainSwift.xcodeproj; path = "keychain-swift-master/KeychainSwift.xcodeproj"; sourceTree = "<group>"; };
 		810AE50A1E40B740007E21A7 /* TextFieldEffects.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TextFieldEffects.xcodeproj; path = "TextFieldEffects-master/TextFieldEffects/TextFieldEffects.xcodeproj"; sourceTree = "<group>"; };
+		81105C711E51D99A0016CA3F /* MainEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainEventViewController.swift; sourceTree = "<group>"; };
 		8110D1981E2F6B0E003854ED /* MenuEventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuEventTableViewCell.swift; path = Assets.xcassets/MenuEventTableViewCell.swift; sourceTree = "<group>"; };
 		8110D19A1E2F7A12003854ED /* MeinEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeinEventViewController.swift; sourceTree = "<group>"; };
 		8140A9691E35FE29001CF18B /* SingInMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingInMenuViewController.swift; sourceTree = "<group>"; };
@@ -267,6 +269,34 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		81105C8D1E51F8340016CA3F /* mainTable and event */ = {
+			isa = PBXGroup;
+			children = (
+				81105C711E51D99A0016CA3F /* MainEventViewController.swift */,
+				8110D1981E2F6B0E003854ED /* MenuEventTableViewCell.swift */,
+			);
+			name = "mainTable and event";
+			sourceTree = "<group>";
+		};
+		81105C8E1E51F8F90016CA3F /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				815F4D971E2E2CAC002D7E29 /* MenuViewController.swift */,
+				815F4D991E2E2CF3002D7E29 /* MenuTableViewCell.swift */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		81105C8F1E51F9150016CA3F /* Login & Logout */ = {
+			isa = PBXGroup;
+			children = (
+				81D47ECF1E436060005FC3CC /* RegistrationViewController.swift */,
+				81C0574E1E3F908900AAD70E /* LogInViewController.swift */,
+				8140A9691E35FE29001CF18B /* SingInMenuViewController.swift */,
+			);
+			name = "Login & Logout";
+			sourceTree = "<group>";
+		};
 		818BF2961E2D103E00DFB36E = {
 			isa = PBXGroup;
 			children = (
@@ -291,24 +321,21 @@
 		818BF2A11E2D103E00DFB36E /* view_vidvaga_2 */ = {
 			isa = PBXGroup;
 			children = (
+				81105C8F1E51F9150016CA3F /* Login & Logout */,
+				81105C8E1E51F8F90016CA3F /* Menu */,
+				81105C8D1E51F8340016CA3F /* mainTable and event */,
 				81C057501E3F953900AAD70E /* SWRevealViewController */,
 				818BF2A21E2D103E00DFB36E /* AppDelegate.swift */,
 				818BF2A41E2D103E00DFB36E /* ViewController.swift */,
 				818BF2A61E2D103E00DFB36E /* Main.storyboard */,
-				815F4D971E2E2CAC002D7E29 /* MenuViewController.swift */,
-				815F4D991E2E2CF3002D7E29 /* MenuTableViewCell.swift */,
 				818BF2AC1E2D103E00DFB36E /* Assets.xcassets */,
 				818BF2AE1E2D103E00DFB36E /* LaunchScreen.storyboard */,
 				818BF2B11E2D103E00DFB36E /* Info.plist */,
 				818BF2A91E2D103E00DFB36E /* view_vidvaga_2.xcdatamodeld */,
 				818BF2B71E2D105100DFB36E /* view_vidvaga_2-Bridging-Header.h */,
 				815F4D9B1E2E5563002D7E29 /* MassegeViewController.swift */,
-				8110D1981E2F6B0E003854ED /* MenuEventTableViewCell.swift */,
 				8110D19A1E2F7A12003854ED /* MeinEventViewController.swift */,
-				8140A9691E35FE29001CF18B /* SingInMenuViewController.swift */,
-				81C0574E1E3F908900AAD70E /* LogInViewController.swift */,
 				81802C581E41EC7D003FF627 /* DeteilEventViewController.swift */,
-				81D47ECF1E436060005FC3CC /* RegistrationViewController.swift */,
 			);
 			path = view_vidvaga_2;
 			sourceTree = "<group>";
@@ -612,6 +639,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81105C721E51D99A0016CA3F /* MainEventViewController.swift in Sources */,
 				818BF2A51E2D103E00DFB36E /* ViewController.swift in Sources */,
 				8110D1991E2F6B0E003854ED /* MenuEventTableViewCell.swift in Sources */,
 				81802C591E41EC7D003FF627 /* DeteilEventViewController.swift in Sources */,
