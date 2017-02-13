@@ -13,9 +13,11 @@ import TextFieldEffects
 import Alamofire
 import SwiftyJSON
 
-class LogInViewController: UIViewController {
+class LogInViewController: UIViewController,UITextFieldDelegate {
 
     //MARK: - Outlets
+    
+    let MAX_LENGTH_STRING = 20
     
     @IBOutlet weak var btnMenu: UIBarButtonItem!
 
@@ -37,6 +39,8 @@ class LogInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        phoneNumberText.delegate = self
+        
         // Do any additional setup after loading the view.
         
         //обработка выезжания бокового меню
@@ -134,4 +138,17 @@ class LogInViewController: UIViewController {
         }
     }
 }
+    
+    //MARK: - UITextFieldDelegate
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange,
+                   replacementString string: String) -> Bool
+    {
+        
+        let currentString: NSString = textField.text! as NSString
+        let newString: NSString =
+            currentString.replacingCharacters(in: range, with: string) as NSString
+        return newString.length <= MAX_LENGTH_STRING
+    }
+    
+    
 }

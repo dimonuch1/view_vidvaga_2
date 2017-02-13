@@ -621,7 +621,7 @@ Anyway, deleting the unconnected twin solved my problem. After that, I removed a
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aet-bU-NZf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3335" y="319"/>
+            <point key="canvasLocation" x="3758" y="331"/>
         </scene>
         <!--Новость-->
         <scene sceneID="83a-nu-lxC">
@@ -642,11 +642,11 @@ Anyway, deleting the unconnected twin solved my problem. After that, I removed a
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" fixedFrame="YES" image="ukr2" translatesAutoresizingMaskIntoConstraints="NO" id="CUR-BH-yEE">
-                                                <rect key="frame" x="16" y="130" width="226" height="183"/>
+                                                <rect key="frame" x="16" y="118" width="265" height="183"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.01.2017 Событие" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHp-AT-Diw" userLabel="date">
-                                                <rect key="frame" x="14" y="105" width="169" height="21"/>
+                                                <rect key="frame" x="14" y="92.5" width="169" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="169" id="aTX-9O-6HH"/>
                                                     <constraint firstAttribute="height" constant="21" id="fOE-Dd-36X"/>
@@ -656,7 +656,7 @@ Anyway, deleting the unconnected twin solved my problem. After that, I removed a
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FlW-0q-iXT" userLabel="mainText">
-                                                <rect key="frame" x="16" y="25" width="343" height="80.5"/>
+                                                <rect key="frame" x="16" y="10" width="343" height="80.5"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="В украине началась борьба с резервистами очень важная новость про АТО какой то там номер была-боа бла-бла ">
                                                         <attributes>
@@ -706,11 +706,10 @@ Anyway, deleting the unconnected twin solved my problem. After that, I removed a
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLI-fn-pj9">
-                                                <rect key="frame" x="14" y="316" width="228" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLI-fn-pj9">
+                                                <rect key="frame" x="16" y="303" width="267" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.41508239219999998" green="0.77876405530000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -718,13 +717,15 @@ Anyway, deleting the unconnected twin solved my problem. After that, I removed a
                                             <constraint firstItem="FlW-0q-iXT" firstAttribute="leading" secondItem="48p-iA-RLm" secondAttribute="leading" constant="16" id="2bh-qg-VTS"/>
                                             <constraint firstAttribute="height" constant="1000" id="HJo-4p-O6A"/>
                                             <constraint firstItem="qHp-AT-Diw" firstAttribute="leading" secondItem="48p-iA-RLm" secondAttribute="leading" constant="14" id="Iq9-2O-Mhb"/>
-                                            <constraint firstItem="FlW-0q-iXT" firstAttribute="top" secondItem="48p-iA-RLm" secondAttribute="top" constant="25" id="TGa-rh-GFq"/>
+                                            <constraint firstItem="FlW-0q-iXT" firstAttribute="top" secondItem="48p-iA-RLm" secondAttribute="top" constant="10" id="TGa-rh-GFq"/>
                                             <constraint firstAttribute="trailing" secondItem="FlW-0q-iXT" secondAttribute="trailing" constant="16" id="Usj-ba-3SP"/>
-                                            <constraint firstItem="qHp-AT-Diw" firstAttribute="top" secondItem="FlW-0q-iXT" secondAttribute="bottom" constant="-0.5" id="XNR-6z-hxk"/>
+                                            <constraint firstAttribute="bottom" secondItem="DLI-fn-pj9" secondAttribute="bottom" constant="676" id="Vz3-9O-HS1"/>
+                                            <constraint firstItem="qHp-AT-Diw" firstAttribute="top" secondItem="FlW-0q-iXT" secondAttribute="bottom" constant="1.5" id="XNR-6z-hxk"/>
+                                            <constraint firstItem="DLI-fn-pj9" firstAttribute="leading" secondItem="48p-iA-RLm" secondAttribute="leading" constant="16" id="agX-em-rzR"/>
                                         </constraints>
                                     </view>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yiq-Lo-Ezv">
-                                        <rect key="frame" x="8" y="336" width="367" height="464"/>
+                                        <rect key="frame" x="13" y="336" width="367" height="464"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Got a Swift project using Alamofire that needs to be migrated to Swift 3.0? Then you’ve probably figured out just how painful it can be if you try to just run the Xcode migration tool and figure out all of the errors. Changes to both Swift and Alamofire can make it tough to know just how to update those calls. So let’s look at a few common types of the Alamofire calls in Swift 2.2 and see how we can update them for Swift 3.0.  While this thread is old, I didn't see an answer describing what worked for me, so here goes...
 
@@ -741,11 +742,11 @@ Anyway, deleting the unconnected twin solved my problem. After that, I removed a
                                     <constraint firstItem="yiq-Lo-Ezv" firstAttribute="top" secondItem="2OD-2J-BAb" secondAttribute="top" constant="336" id="7ah-ty-PyH"/>
                                     <constraint firstAttribute="trailing" secondItem="48p-iA-RLm" secondAttribute="trailing" id="N0g-2E-V2X"/>
                                     <constraint firstAttribute="bottom" secondItem="48p-iA-RLm" secondAttribute="bottom" constant="-200" id="WeF-PX-BIU"/>
-                                    <constraint firstAttribute="trailing" secondItem="yiq-Lo-Ezv" secondAttribute="trailing" id="h8S-9k-Nyf"/>
+                                    <constraint firstAttribute="trailing" secondItem="yiq-Lo-Ezv" secondAttribute="trailing" constant="-5" id="h8S-9k-Nyf"/>
                                     <constraint firstAttribute="bottom" secondItem="yiq-Lo-Ezv" secondAttribute="bottom" id="kI4-yD-uF9"/>
                                     <constraint firstItem="48p-iA-RLm" firstAttribute="top" secondItem="2OD-2J-BAb" secondAttribute="top" id="kXu-Nc-52b"/>
                                     <constraint firstItem="48p-iA-RLm" firstAttribute="leading" secondItem="2OD-2J-BAb" secondAttribute="leading" id="mBY-P9-0Yk"/>
-                                    <constraint firstItem="yiq-Lo-Ezv" firstAttribute="leading" secondItem="2OD-2J-BAb" secondAttribute="leading" constant="8" id="zdC-38-9h6"/>
+                                    <constraint firstItem="yiq-Lo-Ezv" firstAttribute="leading" secondItem="2OD-2J-BAb" secondAttribute="leading" constant="13" id="zdC-38-9h6"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -768,6 +769,7 @@ Anyway, deleting the unconnected twin solved my problem. After that, I removed a
                         <outlet property="helperText" destination="yiq-Lo-Ezv" id="vvM-ge-dJx"/>
                         <outlet property="image" destination="CUR-BH-yEE" id="gdm-13-HLy"/>
                         <outlet property="mainText" destination="FlW-0q-iXT" id="sTh-lP-0lG"/>
+                        <outlet property="menuButton" destination="65R-a5-WmP" id="hXv-OH-Rss"/>
                         <outlet property="tags" destination="DLI-fn-pj9" id="dBo-Lo-X2T"/>
                     </connections>
                 </viewController>

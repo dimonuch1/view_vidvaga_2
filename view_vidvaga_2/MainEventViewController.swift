@@ -35,6 +35,7 @@ class MainEventViewController: UIViewController {
         date.text = dateTmp
         helperText.text = helperTextTmp
         image.image = imageTmp
+        tags.text = tagsTmp
         
         
         //обработка выезжания бокового меню
