@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "ic_help.png",
+      "filename" : "Help_50.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "ic_help_2x.png",
+      "filename" : "Help_100.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "ic_help_3x.png",
+      "filename" : "Help_500.png",
       "scale" : "3x"
     }
   ],

@@ -11,8 +11,12 @@ import TextFieldEffects
 import Alamofire
 import SwiftyJSON
 
-class RegistrationViewController: UIViewController {
+class RegistrationViewController: UIViewController,UITextFieldDelegate {
 
+//MARK: - Outlets
+    
+    let MAX_LENGTH_STRING = 30
+    
     @IBOutlet weak var password: UITextField!
     
     @IBOutlet weak var repit_password: UITextField!
@@ -31,7 +35,7 @@ class RegistrationViewController: UIViewController {
     
     var json:[String : Any] = [:]
 
-    //MARK: - Start
+//MARK: - Start
     
     @IBAction func save(_ sender: UIBarButtonItem) {
         
@@ -55,19 +59,6 @@ class RegistrationViewController: UIViewController {
             //создать окошко алерт оповещающее о том что производится попытка входа
             //добавить ездещий танчик!!!!
 
-         /*
-         print("response------>>>>>")
-         print(response)
-         print("response.request----->>>>>")
-         print(response.request)  // original URL request
-         print("response.response---->>>>>")
-         print(response.response) // URL response
-         print("response.data---->>>>>")
-         print(response.data)     // server data
-         print("response.result----->>>>")
-         print(response.result)   // result of response serialization
-         print("json = response.result.value======>>>")
-         */
             
             if let json = response.result.value {
                 //print("JSON: \(json)")
@@ -77,16 +68,7 @@ class RegistrationViewController: UIViewController {
                 if message == "ok" {
                     self.alertMessage(title: "Реєстрація пройша успішно", message: "Дочекайтеся SMS пароля для підтвердження")
                     
-                    //отмечаем вход в систему
-                    /*
-                    let singleton = Singleton.shared
-                    singleton.login = true
-                    let defaults = UserDefaults.standard
-                    defaults.set(true, forKey: "login")
-                    defaults.synchronize()
-                    */
-                    
-                     //переход на окно отправки смс пароля
+                    //переход на окно отправки смс пароля
                     
                     //что то важное
                     let revealViewController:SWRevealViewController = self.revealViewController()
@@ -137,17 +119,56 @@ class RegistrationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        password.delegate = self
+        repit_password.delegate = self
+        id.delegate = self
+        phone.delegate = self
+        
         password.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         repit_password.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         id.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         phone.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        
+        
+        phone.becomeFirstResponder()
 }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+//MARK: - UITextFieldDelegate
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange,
+                   replacementString string: String) -> Bool
+    {
+        
+        let currentString: NSString = textField.text! as NSString
+        let newString: NSString =
+            currentString.replacingCharacters(in: range, with: string) as NSString
+        return newString.length <= MAX_LENGTH_STRING
+        
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        // Try to find next responder
+        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            // Not found, so remove keyboard.
+            textField.resignFirstResponder()
+            UIApplication.shared.sendAction(registerButton.action!, to: registerButton.target, from: self, for: nil)
+        }
+        // Do not add a line break
+        return false
+    }
+
 }
+
+
+
 
 //MARK: - SmsRegistration
 
@@ -204,7 +225,12 @@ class SmsRegistration:UIViewController {
         //обработка выезжания скольжением пальца
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
+        
+        
+        
     }
+    
+    
     
 }
 

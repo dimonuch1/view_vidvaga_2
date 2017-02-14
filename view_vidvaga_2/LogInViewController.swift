@@ -32,14 +32,17 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
     
     @IBOutlet weak var registrationButtom: UIButton!
     
-    let urlLogin = "http://oasushqg.beget.tech/user/create"
+    var json:[String : Any] = [:]
     
-    //MARK: - Start
+    let urlLogin = "http://y937220i.bget.ru/users/login"
+    
+//MARK: - Start
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         phoneNumberText.delegate = self
+        passwordText.delegate = self
         
         // Do any additional setup after loading the view.
         
@@ -65,13 +68,15 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
             enterBottom.isEnabled = false
             registerButton.isEnabled = false
         }
+        
+        
+        phoneNumberText.becomeFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     func alertMessage(title:String,message:String) {
         //вывод сообщения о oшибке
@@ -100,7 +105,7 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
             //добавить ездещий танчик!!!!!
             
             //анрапаем так как поля точно не пустые
-            let json = ["phone_number": phoneNumberText.text!,
+            json = ["phone_number": phoneNumberText.text!,
                         "password": passwordText.text!] as [String : Any]
     
              Alamofire.request(urlLogin, method: .post, parameters: json, encoding: JSONEncoding.default)
@@ -108,17 +113,21 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
                 
                 //создать окошко алерт оповещающее о том что производится попытка входа
                 //добавить ездещий танчик
-                
+               
+                print(response)
              if let json = response.result.value {
-                
+               
                 let json2 = JSON(json)
                 
+                print(json2)
                 let message = json2["message"].string
                 //обпаботка сообщение которое вернет сервер
                 
                 //рпользователь вошел успешно
              if message == "ok" {
-                
+                //+380937222858
+                //password
+                self.hideActivityIndicator()
                 let singleton = Singleton.shared
                 singleton.login = true
                 let defaults = UserDefaults.standard
@@ -126,7 +135,8 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
                 defaults.synchronize()
              } else {
                 //пользователь вошел не успешно
-                self.alertMessage(title: "Ошибка", message: message!)
+                self.hideActivityIndicator()
+                self.alertMessage(title: "Ошибка", message: message ?? "не известная ошибка")
                 }
              }
     
@@ -139,16 +149,40 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
     }
 }
     
-    //MARK: - UITextFieldDelegate
+//MARK: - UITextFieldDelegate
+    //ограничение количества симолов в строке
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange,
                    replacementString string: String) -> Bool
     {
-        
         let currentString: NSString = textField.text! as NSString
         let newString: NSString =
             currentString.replacingCharacters(in: range, with: string) as NSString
         return newString.length <= MAX_LENGTH_STRING
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        // Try to find next responder
+        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            // Not found, so remove keyboard.
+            textField.resignFirstResponder()
+            enterBottom.sendActions(for: .touchUpInside)
+
+        }
+        // Do not add a line break
+        return false
+    }
     
+//MARK: - Activiti_indicator
+    
+    func hideActivityIndicator() {
+        let asinc = DispatchQueue.global(qos: .background)
+        asinc.async {
+            //self.spinner.stopAnimating()
+            //self.loadingView.removeFromSuperview()
+        }
+    }
+
 }
