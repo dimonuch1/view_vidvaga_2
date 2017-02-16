@@ -24,6 +24,8 @@
 		818BF2AD1E2D103E00DFB36E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 818BF2AC1E2D103E00DFB36E /* Assets.xcassets */; };
 		818BF2B01E2D103E00DFB36E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 818BF2AE1E2D103E00DFB36E /* LaunchScreen.storyboard */; };
 		818BF2BA1E2D105100DFB36E /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818BF2B91E2D105100DFB36E /* SWRevealViewController.m */; };
+		8196DF6A1E55D09B006F3EC0 /* RecoveryPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8196DF691E55D09B006F3EC0 /* RecoveryPasswordViewController.swift */; };
+		8196E01D1E55F83D006F3EC0 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8196E0101E55F833006F3EC0 /* AlamofireImage.framework */; };
 		81C0574F1E3F908900AAD70E /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C0574E1E3F908900AAD70E /* LogInViewController.swift */; };
 		81D47ED01E436060005FC3CC /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D47ECF1E436060005FC3CC /* RegistrationViewController.swift */; };
 		81D47F021E436D26005FC3CC /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D47EDC1E436D0A005FC3CC /* SwiftyJSON.framework */; };
@@ -142,6 +144,55 @@
 			proxyType = 2;
 			remoteGlobalIDString = B53E39A71CA177C900EB1EEE;
 			remoteInfo = "Hue-tvOS-Tests";
+		};
+		8196E00F1E55F833006F3EC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8196E0031E55F832006F3EC0 /* AlamofireImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4C9043771AABBFC5001B4E60;
+			remoteInfo = "AlamofireImage iOS";
+		};
+		8196E0111E55F833006F3EC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8196E0031E55F832006F3EC0 /* AlamofireImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4C9043821AABBFC5001B4E60;
+			remoteInfo = "AlamofireImage iOS Tests";
+		};
+		8196E0131E55F833006F3EC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8196E0031E55F832006F3EC0 /* AlamofireImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CE611321AABC24E00D35044;
+			remoteInfo = "AlamofireImage macOS";
+		};
+		8196E0151E55F833006F3EC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8196E0031E55F832006F3EC0 /* AlamofireImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CE611471AABC5C900D35044;
+			remoteInfo = "AlamofireImage macOS Tests";
+		};
+		8196E0171E55F833006F3EC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8196E0031E55F832006F3EC0 /* AlamofireImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4C16B37D1BA9399500A66EF0;
+			remoteInfo = "AlamofireImage tvOS";
+		};
+		8196E0191E55F833006F3EC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8196E0031E55F832006F3EC0 /* AlamofireImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4C16B3861BA9399500A66EF0;
+			remoteInfo = "AlamofireImage tvOS Tests";
+		};
+		8196E01B1E55F833006F3EC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8196E0031E55F832006F3EC0 /* AlamofireImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4C4D4EC11B92976900C96855;
+			remoteInfo = "AlamofireImage watchOS";
 		};
 		81D47EDB1E436D0A005FC3CC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -265,6 +316,8 @@
 		818BF2B71E2D105100DFB36E /* view_vidvaga_2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "view_vidvaga_2-Bridging-Header.h"; sourceTree = "<group>"; };
 		818BF2B81E2D105100DFB36E /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		818BF2B91E2D105100DFB36E /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		8196DF691E55D09B006F3EC0 /* RecoveryPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecoveryPasswordViewController.swift; sourceTree = "<group>"; };
+		8196E0031E55F832006F3EC0 /* AlamofireImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AlamofireImage.xcodeproj; path = "AlamofireImage-master/AlamofireImage.xcodeproj"; sourceTree = "<group>"; };
 		81C057311E3F699C00AAD70E /* .. */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ..; path = ../..; sourceTree = "<group>"; };
 		81C0574E1E3F908900AAD70E /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		81D47ECF1E436060005FC3CC /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -277,6 +330,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8196E01D1E55F83D006F3EC0 /* AlamofireImage.framework in Frameworks */,
 				818387011E531DB4001F2154 /* Hue.framework in Frameworks */,
 				81D47F031E436D2A005FC3CC /* Alamofire.framework in Frameworks */,
 				81D47F021E436D26005FC3CC /* SwiftyJSON.framework in Frameworks */,
@@ -336,6 +390,7 @@
 				81D47ECF1E436060005FC3CC /* RegistrationViewController.swift */,
 				81C0574E1E3F908900AAD70E /* LogInViewController.swift */,
 				8140A9691E35FE29001CF18B /* SingInMenuViewController.swift */,
+				8196DF691E55D09B006F3EC0 /* RecoveryPasswordViewController.swift */,
 			);
 			name = "Login & Logout";
 			sourceTree = "<group>";
@@ -356,6 +411,7 @@
 		818BF2961E2D103E00DFB36E = {
 			isa = PBXGroup;
 			children = (
+				8196E0031E55F832006F3EC0 /* AlamofireImage.xcodeproj */,
 				818386D21E531DA4001F2154 /* Hue.xcodeproj */,
 				81D47EE91E436D12005FC3CC /* Alamofire.xcodeproj */,
 				81D47ED11E436D0A005FC3CC /* SwiftyJSON.xcodeproj */,
@@ -394,6 +450,20 @@
 				81802C581E41EC7D003FF627 /* DeteilEventViewController.swift */,
 			);
 			path = view_vidvaga_2;
+			sourceTree = "<group>";
+		};
+		8196E0041E55F832006F3EC0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8196E0101E55F833006F3EC0 /* AlamofireImage.framework */,
+				8196E0121E55F833006F3EC0 /* AlamofireImage iOS Tests.xctest */,
+				8196E0141E55F833006F3EC0 /* AlamofireImage.framework */,
+				8196E0161E55F833006F3EC0 /* AlamofireImage macOS Tests.xctest */,
+				8196E0181E55F833006F3EC0 /* AlamofireImage.framework */,
+				8196E01A1E55F833006F3EC0 /* AlamofireImage tvOS Tests.xctest */,
+				8196E01C1E55F833006F3EC0 /* AlamofireImage.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		81C057501E3F953900AAD70E /* SWRevealViewController */ = {
@@ -485,6 +555,10 @@
 				{
 					ProductGroup = 81D47EEA1E436D12005FC3CC /* Products */;
 					ProjectRef = 81D47EE91E436D12005FC3CC /* Alamofire.xcodeproj */;
+				},
+				{
+					ProductGroup = 8196E0041E55F832006F3EC0 /* Products */;
+					ProjectRef = 8196E0031E55F832006F3EC0 /* AlamofireImage.xcodeproj */;
 				},
 				{
 					ProductGroup = 818386D31E531DA4001F2154 /* Products */;
@@ -623,6 +697,55 @@
 			remoteRef = 818386ED1E531DA5001F2154 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		8196E0101E55F833006F3EC0 /* AlamofireImage.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AlamofireImage.framework;
+			remoteRef = 8196E00F1E55F833006F3EC0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8196E0121E55F833006F3EC0 /* AlamofireImage iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "AlamofireImage iOS Tests.xctest";
+			remoteRef = 8196E0111E55F833006F3EC0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8196E0141E55F833006F3EC0 /* AlamofireImage.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AlamofireImage.framework;
+			remoteRef = 8196E0131E55F833006F3EC0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8196E0161E55F833006F3EC0 /* AlamofireImage macOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "AlamofireImage macOS Tests.xctest";
+			remoteRef = 8196E0151E55F833006F3EC0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8196E0181E55F833006F3EC0 /* AlamofireImage.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AlamofireImage.framework;
+			remoteRef = 8196E0171E55F833006F3EC0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8196E01A1E55F833006F3EC0 /* AlamofireImage tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "AlamofireImage tvOS Tests.xctest";
+			remoteRef = 8196E0191E55F833006F3EC0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8196E01C1E55F833006F3EC0 /* AlamofireImage.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AlamofireImage.framework;
+			remoteRef = 8196E01B1E55F833006F3EC0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		81D47EDC1E436D0A005FC3CC /* SwiftyJSON.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -749,6 +872,7 @@
 				81D47ED01E436060005FC3CC /* RegistrationViewController.swift in Sources */,
 				815F4D9C1E2E5563002D7E29 /* MassegeViewController.swift in Sources */,
 				815F4D9A1E2E2CF3002D7E29 /* MenuTableViewCell.swift in Sources */,
+				8196DF6A1E55D09B006F3EC0 /* RecoveryPasswordViewController.swift in Sources */,
 				818BF2AB1E2D103E00DFB36E /* view_vidvaga_2.xcdatamodeld in Sources */,
 				818BF2A31E2D103E00DFB36E /* AppDelegate.swift in Sources */,
 				8140A96A1E35FE29001CF18B /* SingInMenuViewController.swift in Sources */,

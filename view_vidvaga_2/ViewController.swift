@@ -47,7 +47,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     //=============================================================================================
     
-    //MARK: - Start
+//MARK: - Start
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -132,7 +132,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
-    //MARK: - UITableViewDataSource
+//MARK: - UITableViewDataSource
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return mainEvent.count
@@ -179,14 +179,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         revealViewController.pushFrontViewController(newFrontViewController, animated: true)
     }
     
-    //Mark: - UITableViewDelegate
+//Mark: - UITableViewDelegate
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
         return 130.0
     }
 
     
     
-    //MARK: - Action
+//MARK: - Action
     
     @IBAction func pressedOnNews(_ sender: UIButton) {
         
@@ -245,7 +245,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
-    // MARK: - CoraData
+// MARK: - CoraData
     
     //получение контекста
     func getContext () -> NSManagedObjectContext {

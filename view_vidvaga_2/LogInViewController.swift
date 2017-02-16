@@ -15,7 +15,7 @@ import SwiftyJSON
 
 class LogInViewController: UIViewController,UITextFieldDelegate {
 
-    //MARK: - Outlets
+//MARK: - Outlets
     
     let MAX_LENGTH_STRING = 20
     
@@ -24,6 +24,9 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var phoneNumberText: UITextField!
     
     @IBOutlet weak var passwordText: UITextField!
+    
+    @IBOutlet weak var activiryIndicator: UIActivityIndicatorView!
+    
 
     
     @IBOutlet weak var registerButton: UIButton!
@@ -52,6 +55,7 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
         //обработка выезжания скольжением пальца
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
+        /*
         //enterBottom.backgroundColor = UIColor.clear
         enterBottom.layer.cornerRadius = 5
         enterBottom.layer.borderWidth = 1
@@ -61,6 +65,7 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
         registrationButtom.layer.cornerRadius = 5
         registrationButtom.layer.borderWidth = 1
         registrationButtom.layer.borderColor = UIColor.black.cgColor
+        */
         
         let singleton = Singleton.shared
         
@@ -71,6 +76,7 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
         
         
         phoneNumberText.becomeFirstResponder()
+        phoneNumberText.text = "(+380)"
     }
 
     override func didReceiveMemoryWarning() {
@@ -90,8 +96,20 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
         self.present(alertController, animated: true, completion: nil)
     }
     
-    //войти
+    func createPhoneNumber() {
+        
+        self.phoneNumberText.text = self.phoneNumberText.text?.replacingOccurrences(of: ")", with: "")
+        self.phoneNumberText.text = self.phoneNumberText.text?.replacingOccurrences(of: "(", with: "")
+        
+    }
+    
+    
+//MARK: - Action
     @IBAction func createAcount(_ sender: UIButton) {
+        
+        self.view.endEditing(true)
+        
+        self.activiryIndicator.startAnimating()
         
         //не помню заче это нужно
          let revealViewController:SWRevealViewController = self.revealViewController()
@@ -103,7 +121,8 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
             
             //создать окошко алерт оповещающее о том что производится попытка входа
             //добавить ездещий танчик!!!!!
-            
+            createPhoneNumber()
+            print(self.phoneNumberText.text)
             //анрапаем так как поля точно не пустые
             json = ["phone_number": phoneNumberText.text!,
                         "password": passwordText.text!] as [String : Any]
@@ -124,27 +143,30 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
                 //обпаботка сообщение которое вернет сервер
                 
                 //рпользователь вошел успешно
-             if message == "ok" {
+             if message == "0" {
+                self.activiryIndicator.stopAnimating()
                 //+380937222858
                 //password
-                self.hideActivityIndicator()
+                //self.hideActivityIndicator()
                 let singleton = Singleton.shared
                 singleton.login = true
                 let defaults = UserDefaults.standard
                 defaults.set(true, forKey: "login")
                 defaults.synchronize()
+                
+                //переводим на главный экран новостей
+                let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let desController = mainStoryboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+                let newFrontViewController = UINavigationController.init(rootViewController: desController)
+                revealViewController.pushFrontViewController(newFrontViewController, animated: true)
+                
              } else {
                 //пользователь вошел не успешно
-                self.hideActivityIndicator()
+                //self.hideActivityIndicator()
+                self.activiryIndicator.stopAnimating()
                 self.alertMessage(title: "Ошибка", message: message ?? "не известная ошибка")
                 }
              }
-    
-            //переводим на главный экран новостей
-            let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let desController = mainStoryboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
-            let newFrontViewController = UINavigationController.init(rootViewController: desController)
-            revealViewController.pushFrontViewController(newFrontViewController, animated: true)
         }
     }
 }

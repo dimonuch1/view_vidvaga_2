@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "view_vidvaga_2/RegistrationViewController.swift"
-            timestampString = "508754364.608983"
+            timestampString = "508934759.763793"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "save(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "view_vidvaga_2/RegistrationViewController.swift"
-            timestampString = "508776602.28714"
+            timestampString = "508935063.391596"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "save(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -249,11 +249,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "view_vidvaga_2/LogInViewController.swift"
-            timestampString = "508774225.470287"
+            timestampString = "508927676.94036"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -265,27 +265,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "view_vidvaga_2/LogInViewController.swift"
-            timestampString = "508775989.290623"
+            timestampString = "508941049.442518"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
-            landmarkName = "createAcount(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "view_vidvaga_2/LogInViewController.swift"
-            timestampString = "508775989.290623"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
             landmarkName = "createAcount(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -393,11 +377,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "view_vidvaga_2/LogInViewController.swift"
-            timestampString = "508775989.290623"
+            timestampString = "508941049.442518"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
             landmarkName = "createAcount(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -409,11 +393,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "view_vidvaga_2/RegistrationViewController.swift"
-            timestampString = "508754364.608983"
+            timestampString = "508934372.797404"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "save(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -425,11 +409,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "view_vidvaga_2/LogInViewController.swift"
-            timestampString = "508775989.290623"
+            timestampString = "508941049.442518"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
             landmarkName = "createAcount(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -473,11 +457,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "view_vidvaga_2/LogInViewController.swift"
-            timestampString = "508777705.594752"
+            timestampString = "508941049.442518"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "181"
-            endingLineNumber = "181"
+            startingLineNumber = "203"
+            endingLineNumber = "203"
             landmarkName = "hideActivityIndicator()"
             landmarkType = "7">
          </BreakpointContent>
